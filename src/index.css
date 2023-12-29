@@ -276,6 +276,47 @@ SPECIFIC LAYOUT AND STYLES=
   animation-name: closeMenu;
 }
 
+/* DARKMODE/LIGHTMODE TOGGLE */
+.darkmode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.darkmode-toggle:checked + .darkmode-label {
+  background-color: #242424;
+}
+
+.darkmode-toggle:checked + .darkmode-label:after {
+  transform: translateX(165%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.darkmode-label,
+.darkmode-label:after {
+  transition: 0.4s;
+}
+
+.darkmode-label {
+  width: 2em;
+  height: 0.75em;
+  position: relative;
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 40px;
+  box-shadow: var(--blue-box-shadow);
+  cursor: pointer;
+}
+
+.darkmode-label:after {
+  content: "";
+  width: 0.75em;
+  height: 0.75em;
+  position: absolute;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 50%;
+}
+
 /*============================
 MEDIA QUERIES==============
 ==============================*/
