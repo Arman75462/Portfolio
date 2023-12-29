@@ -3,7 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- FAVICON  -->
+    <link rel="icon" href="images/initials.png" type="image/x-icon" />
+    <!-- CSS-FILE LINK -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- TAB TITLE -->
+    <title>Arman Gulistani | Front End Developer</title>
   </head>
-  <body></body>
+  <body>
+    <!-- 1- HEADER -->
+    <header class="header">
+      <!-- 2- NAV -->
+      <nav class="header__nav">
+        <!-- 3- LINKS -->
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Skillset</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+        <!-- 3- DARKMODE TOGGLE -->
+        <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle" />
+        <label for="darkmode-toggle" class="darkmode-label"></label>
+      </nav>
+    </header>
+
+    <!-- 1- HERO SECTION -->
+    <section class="hero">
+      <h1 class="hero__title"></h1>
+      <button type="button" class="hero__cta cta"></button>
+    </section>
+
+    <!-- 1- ABOUT -->
+    <main class="about">
+      <!-- 2- IMAGE OF YOURSELF -->
+      <img src="" alt="Arman Gulistani" class="about__image" />
+
+      <!-- 2- ABOUT ME -->
+      <article class="about-me">
+        <h2 class="about-me__title">About me</h2>
+        <p class="about-me__story"></p>
+        <button type="button" class="about-me__cta cta"></button>
+        <button type="button" class="about-me__cta cta">Resume</button>
+      </article>
+    </main>
+
+    <!-- 1- SKILLS -->
+    <section class="skills">
+      <h2 class="skills__title">Skillset</h2>
+
+      <!-- 2- SKILL SECTION -->
+      <article class="skill">
+        <img
+          src="images/icons8-html.svg"
+          alt="HTML icon by Icons8"
+          class="skill__icon"
+        />
+        <h3 class="skill__name">HTML</h3>
+      </article>
+      <article class="skill">
+        <img
+          src="images/icons8-css.svg"
+          alt="CSS icon by Icons8"
+          class="skill__icon"
+        />
+        <h3 class="skill__name">CSS</h3>
+      </article>
+      <article class="skill">
+        <img
+          src="images/icons8-javascript.svg"
+          alt="JavaScript icon by Icons8n"
+          class="skill__icon"
+        />
+        <h3 class="skill__name">JavaScript</h3>
+      </article>
+      <article class="skill">
+        <img
+          src="images/icons8-webpack.svg"
+          alt="Webpack icon by Icons8"
+          class="skill__icon"
+        />
+        <h3 class="skill__name">Webpack</h3>
+      </article>
+      <article class="skill">
+        <img
+          src="images/icons8-git.svg"
+          alt="Git icon by Icons8"
+          class="skill__icon"
+        />
+        <h3 class="skill__name">Git</h3>
+      </article>
+      <article class="skill">
+        <img
+          src="images/icons8-github.svg"
+          alt="GitHub icon by Icons8"
+          class="skill__icon"
+        />
+        <h3 class="skill__name">GitHub</h3>
+      </article>
+    </section>
+
+    <!-- 1- PROJECTS -->
+    <section class="projects">
+      <h2 class="projects__title">Projects</h2>
+
+      <!-- 2- PROJECT 1 -->
+      <article class="project project1">
+        <img src="" alt="Project 1" class="project__image" />
+        <h3 class="project__title">Project 1</h3>
+        <p class="project__description">
+          Description of Project 1. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+        <a href="#" class="project__link">View Project</a>
+      </article>
+
+      <!-- 2- PROJECT 2 -->
+      <article class="project project2">
+        <img src="" alt="Project 2" class="project__image" />
+        <h3 class="project__title">Project 2</h3>
+        <p class="project__description">
+          Description of Project 2. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+        <a href="#" class="project__link">View Project</a>
+      </article>
+
+      <!-- 2- PROJECT 3 -->
+      <article class="project project3">
+        <img src="" alt="Project 3" class="project__image" />
+        <h3 class="project__title">Project 3</h3>
+        <p class="project__description">
+          Description of Project 3. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+        <a href="#" class="project__link">View Project</a>
+      </article>
+
+      <!-- Add more project items as needed -->
+    </section>
+
+    <!-- 1- CONTACT -->
+    <footer class="contact">
+      <p class="contact__email">Email: arman@example.com</p>
+      <p class="contact__phone">Phone: +1 123-456-7890</p>
+      <p class="contact__linkedin">LinkedIn: linkedin.com/in/arman</p>
+      <p class="contact__github">GitHub: github.com/arman</p>
+    </footer>
+  </body>
 </html>
