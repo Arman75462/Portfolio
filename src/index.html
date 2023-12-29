@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- FAVICON  -->
-    <link rel="icon" href="images/initials.png" type="image/x-icon" />
-    <!-- CSS-FILE LINK -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/initialsDarkMode.png" type="image/x-icon" />
     <!-- TAB TITLE -->
     <title>Arman Gulistani | Front End Developer</title>
   </head>
@@ -15,17 +13,27 @@
     <header class="header">
       <!-- 2- NAV -->
       <nav class="header__nav">
-        <!-- 3- LINKS -->
+        <!-- INITIALS -->
+        <p class="header__initials">AG</p>
+        <!-- 3- HABURGER MENU -->
+        <div class="hamburger-wrapper">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- 3- NAV-LINKS -->
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Skillset</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <!-- DARKMODE/LIGHTMODE TOGGLE -->
+          <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle" />
+          <label for="darkmode-toggle" class="darkmode-label"></label>
         </ul>
-        <!-- 3- DARKMODE TOGGLE -->
-        <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle" />
-        <label for="darkmode-toggle" class="darkmode-label"></label>
       </nav>
     </header>
 
@@ -55,51 +63,51 @@
 
       <!-- 2- SKILL SECTION -->
       <article class="skill">
-        <img
+        <!-- <img
           src="images/icons8-html.svg"
           alt="HTML icon by Icons8"
           class="skill__icon"
-        />
+        /> -->
         <h3 class="skill__name">HTML</h3>
       </article>
       <article class="skill">
-        <img
+        <!-- <img
           src="images/icons8-css.svg"
           alt="CSS icon by Icons8"
           class="skill__icon"
-        />
+        /> -->
         <h3 class="skill__name">CSS</h3>
       </article>
       <article class="skill">
-        <img
+        <!-- <img
           src="images/icons8-javascript.svg"
           alt="JavaScript icon by Icons8n"
           class="skill__icon"
-        />
+        /> -->
         <h3 class="skill__name">JavaScript</h3>
       </article>
       <article class="skill">
-        <img
+        <!--  <img
           src="images/icons8-webpack.svg"
           alt="Webpack icon by Icons8"
           class="skill__icon"
-        />
+        /> -->
         <h3 class="skill__name">Webpack</h3>
       </article>
       <article class="skill">
-        <img
+        <!-- <img
           src="images/icons8-git.svg"
           alt="Git icon by Icons8"
           class="skill__icon"
-        />
+        /> -->
         <h3 class="skill__name">Git</h3>
       </article>
       <article class="skill">
-        <img
+        <!-- <img
           src="images/icons8-github.svg"
           alt="GitHub icon by Icons8"
           class="skill__icon"
-        />
+        /> -->
         <h3 class="skill__name">GitHub</h3>
       </article>
     </section>

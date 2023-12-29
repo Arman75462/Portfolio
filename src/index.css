@@ -1,4 +1,5 @@
-/* Your Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
 
 /*============================
 RESETS=====================
@@ -90,10 +91,190 @@ button {
 /*============================
 GENERAL LAYOUT AND STYLES==
 ==============================*/
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+:root {
+  /* Hamburger-menu variables */
+  --hamburger-wrapper-width: 3em; /* ONLY NEED TO CHANGE WRAPPER HEIGHT AND WIDTH */
+  --hamburger-wrapper-height: 3em;
+  --icon-width: calc(var(--hamburger-wrapper-width) * 0.6);
+  --icon-height: calc(var(--hamburger-wrapper-height) * 0.5);
+  --hamburger-icon-span-height: calc(var(--hamburger-wrapper-height) * 0.07);
+  --hamburger-icon-span-border-radius: calc(
+    var(--hamburger-wrapper-height) * 0.1
+  );
+  --hamburger-wrapper-span1-translateY: calc(
+    var(--hamburger-wrapper-height) * 0.19
+  );
+  --hamburger-wrapper-span3-bottom: calc(
+    var(--hamburger-wrapper-height) * 0.23
+  );
+  --hamburger-wrapper-border-radius: calc(
+    var(--hamburger-wrapper-height) * 0.2
+  );
+
+  --blue-box-shadow: 0 0 5px #0ef, 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef;
+}
 
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
+/*  1- HEADER  */
+.header {
+  background-color: red;
+  padding: 1em;
+}
+
+/* 2- NAV  */
+.header__nav {
+  display: flex;
+  background-color: blue;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__initials {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Petit Formal Script", cursive;
+  font-weight: bold;
+}
+
+/* 3- HAMBURGER MENU */
+.hamburger-wrapper {
+  z-index: 1;
+  width: var(--hamburger-wrapper-width);
+  height: var(--hamburger-wrapper-height);
+  border-radius: var(--hamburger-wrapper-border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-icon {
+  position: relative;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  transform: rotate(0);
+  transition: all 1s;
+}
+
+.hamburger-wrapper.active .hamburger-icon {
+  transform: rotate(315deg);
+}
+
+.hamburger-icon span {
+  position: absolute;
+  display: block;
+  height: var(--hamburger-icon-span-height);
+  background: linear-gradient(45deg, #0ef, black);
+  border: 2px solid #0ef;
+  border-radius: var(--hamburger-icon-span-border-radius);
+  box-shadow:
+    0 0 5px #0ef,
+    0 0 10px #0ef;
+  transition: all 0.3s;
+  transition-delay: 1s;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 50%;
+  transform: translateY(0);
+}
+
+.hamburger-icon span:nth-child(2) {
+  width: 100%;
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.hamburger-wrapper.active span:nth-child(1) {
+  width: 100%;
+  transform: translateY(var(--hamburger-wrapper-span1-translateY));
+  transition-delay: 0s;
+}
+
+.hamburger-wrapper.active span:nth-child(2) {
+  transform: scaleX(0);
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.hamburger-icon span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  transform: rotate(0);
+}
+
+.hamburger-wrapper.active span:nth-child(3) {
+  bottom: var(--hamburger-wrapper-span3-bottom);
+  width: 100%;
+  transform: rotate(90deg);
+  transition-delay: 0s;
+}
+
+/* 3- NAV-LINKS */
+@keyframes openMenu {
+  0% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes closeMenu {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+}
+
+.nav__list {
+  display: none;
+}
+
+.show,
+.hide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  font-size: 1.5rem;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.show {
+  animation-name: openMenu;
+}
+
+.hide {
+  animation-name: closeMenu;
+}
 
 /*============================
 MEDIA QUERIES==============
