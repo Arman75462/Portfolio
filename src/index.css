@@ -354,7 +354,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 1- HERO SECTION */
 .hero__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .hero__title > span {
@@ -364,6 +364,53 @@ SPECIFIC LAYOUT AND STYLES=
 
 .hero__cta {
   margin-top: 2em;
+}
+
+/* 1- SKILLS */
+.skills {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1.5em;
+}
+
+.skills__title {
+  margin-bottom: 1.5em;
+  font-size: 2rem;
+}
+
+.skill {
+  transition: transform 0.3s ease;
+  border: 1px solid var(--whitesmoke);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.skill:hover {
+  transform: scale(1.05); /* Hover effect for interactivity */
+}
+
+.skill__icon {
+  height: 4em;
+  width: 4em;
+  margin: 0 auto;
+}
+
+.skill__name {
+  margin-top: 0.5em;
+  font-size: 1.1rem;
+}
+
+.skill__number {
+  display: inline;
+  font-size: 0.7rem;
+  align-self: flex-end;
+  margin-right: 0.4em;
 }
 
 /*============================
