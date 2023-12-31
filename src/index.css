@@ -137,7 +137,7 @@ body {
 .skills,
 .projects,
 .contact {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   padding: 3em 1.5em;
 }
 
@@ -156,6 +156,26 @@ body {
 .cta:focus {
   transform: translateY(-5px);
   box-shadow: var(--blue-box-shadow);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--cyan), var(--black));
+  border-radius: 10px;
+  border: 2px solid var(--cyan);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--whitesmoke), var(--black));
 }
 
 /*============================
