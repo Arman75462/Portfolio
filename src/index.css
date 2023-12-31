@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
 
 /*============================
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.3;
+  line-height: 1;
 }
 
 /* Remove default list styling */
@@ -92,9 +92,9 @@ button {
 GENERAL LAYOUT AND STYLES==
 ==============================*/
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: black;
-  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--black);
+  color: var(--whitesmoke);
 }
 
 :root {
@@ -117,7 +117,44 @@ body {
     var(--hamburger-wrapper-height) * 0.2
   );
 
-  --blue-box-shadow: 0 0 5px #0ef, 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef;
+  /* Blue shadow for elements */
+  --blue-box-shadow: 0 0 5px var(--cyan), 0 0 10px var(--cyan),
+    0 0 20px var(--cyan), 0 0 40px var(--cyan);
+
+  --red-box-shadow: 0 0 2px var(--cyan), 0 0 4px var(--cyan),
+    0 0 8px var(--cyan), 0 0 16px var(--cyan);
+
+  /* Colors */
+  --whitesmoke: whitesmoke;
+  --black: black;
+  --cyan: #0ef;
+}
+
+/* Styles for website sections */
+.header,
+.hero,
+.about,
+.skills,
+.projects,
+.contact {
+  border: 2px solid blue;
+  padding: 3em 1.5em;
+}
+
+/* Call to action styles */
+.cta {
+  background-color: var(--black);
+  padding: 0.6em 1.3em;
+  border-radius: 1em;
+  box-shadow: var(--red-box-shadow);
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.cta:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--blue-box-shadow);
 }
 
 /*============================
@@ -125,14 +162,12 @@ SPECIFIC LAYOUT AND STYLES=
 ==============================*/
 /*  1- HEADER  */
 .header {
-  background-color: red;
-  padding: 1em;
+  padding: 1em 1.5em;
 }
 
 /* 2- NAV  */
 .header__nav {
   display: flex;
-  background-color: blue;
   justify-content: space-between;
   align-items: center;
 }
@@ -146,7 +181,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 3- HAMBURGER MENU */
 .hamburger-wrapper {
-  z-index: 1;
+  z-index: 1000;
   width: var(--hamburger-wrapper-width);
   height: var(--hamburger-wrapper-height);
   border-radius: var(--hamburger-wrapper-border-radius);
@@ -174,12 +209,12 @@ SPECIFIC LAYOUT AND STYLES=
   position: absolute;
   display: block;
   height: var(--hamburger-icon-span-height);
-  background: linear-gradient(45deg, #0ef, black);
-  border: 2px solid #0ef;
+  background: linear-gradient(45deg, var(--cyan), var(--black));
+  border: 2px solid var(--cyan);
   border-radius: var(--hamburger-icon-span-border-radius);
   box-shadow:
-    0 0 5px #0ef,
-    0 0 10px #0ef;
+    0 0 5px var(--cyan),
+    0 0 10px var(--cyan);
   transition: all 0.3s;
   transition-delay: 1s;
 }
@@ -263,7 +298,7 @@ SPECIFIC LAYOUT AND STYLES=
   inset: 0;
   height: 100vh;
   width: 100vw;
-  background: black;
+  background: var(--black);
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -315,6 +350,20 @@ SPECIFIC LAYOUT AND STYLES=
   position: absolute;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 50%;
+}
+
+/* 1- HERO SECTION */
+.hero__title {
+  font-size: 2.5rem;
+}
+
+.hero__title > span {
+  color: rgba(245, 245, 245, 0.5);
+  font-size: 1.5rem;
+}
+
+.hero__cta {
+  margin-top: 2em;
 }
 
 /*============================
