@@ -98,30 +98,6 @@ body {
   cursor: none;
 }
 
-.cursor-dot {
-  width: 5px;
-  height: 5px;
-  background-color: var(--whitesmoke);
-}
-
-.cursor-outline {
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--whitesmoke);
-  opacity: 0.5;
-}
-
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 1;
-  pointer-events: none;
-}
-
 :root {
   /* Hamburger-menu variables */
   --hamburger-wrapper-width: 3em; /* ONLY NEED TO CHANGE WRAPPER HEIGHT AND WIDTH */
@@ -153,6 +129,31 @@ body {
   --whitesmoke: whitesmoke;
   --black: black;
   --cyan: #0ef;
+}
+
+/* Custom cursor styles */
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--whitesmoke);
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--whitesmoke);
+  opacity: 0.5;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10002;
+  pointer-events: none;
 }
 
 /* Styles for website sections */
@@ -232,7 +233,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 3- HAMBURGER MENU */
 .hamburger-wrapper {
-  z-index: 1000;
+  z-index: 1001;
   width: var(--hamburger-wrapper-width);
   height: var(--hamburger-wrapper-height);
   border-radius: var(--hamburger-wrapper-border-radius);
@@ -352,6 +353,7 @@ SPECIFIC LAYOUT AND STYLES=
   background: var(--black);
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  z-index: 1000;
 }
 
 .show {
@@ -404,6 +406,11 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 /* 1- HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero__title {
   font-size: 3rem;
 }
@@ -418,6 +425,16 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 /* 1- ABOUT */
+.about__image {
+  transform: rotateY(-30deg);
+  box-shadow: 5px 5px 20px 0px var(--cyan);
+  margin-bottom: 4em;
+}
+
+/* 2- ABOUT ME */
+.about-me__title {
+  margin-bottom: 1em;
+}
 
 /* 1- SKILLS */
 .skills {
