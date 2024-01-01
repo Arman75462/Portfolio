@@ -9,6 +9,8 @@
     <title>Arman Gulistani | Front End Developer</title>
   </head>
   <body>
+    <!-- scroll-watcher -->
+    <span class="scroll-watcher"></span>
     <!-- CUSTOM CURSOR -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
@@ -44,42 +46,46 @@
 
     <!-- 1- HERO SECTION -->
     <section class="hero">
-      <div>
-        <h1 class="hero__title">
-          <span>I'm a</span>
-          <br />
-          Front-End
-          <br />
-          Web Developer.
-        </h1>
-        <button type="button" class="hero__cta cta">Contact me</button>
-      </div>
-    </section>
+      <h1 class="hero__title">
+        <span>I'm a</span>
+        <br />
+        Front-End
+        <br />
+        Web Developer.
+      </h1>
+      <button type="button" class="hero__cta cta">Contact me</button>
 
-    <!-- 1- ABOUT -->
-    <main class="about">
       <!-- 2- IMAGE OF YOURSELF -->
       <img
         src="images/youngMan.png"
         alt="Arman Gulistani"
-        class="about__image"
+        class="hero__image"
       />
+    </section>
 
+    <!-- 1- ABOUT -->
+    <main class="about">
       <!-- 2- ABOUT ME -->
       <article class="about-me">
         <h2 class="about-me__title">About me</h2>
         <p class="about-me__story">
-          Hi! I'm Arman, a front-end developer where technology meets art. My
-          formula: clean code, user-focused design, and a dash of elegance. I'm
-          an architect in code, passionate about crafting both the structure and
-          beauty of websites. Driven by the excitement of bringing ideas to
-          life, I'm constantly learning and innovating. Ready to create
-          stunning, functional digital solutions? Let's make something
-          incredible together.
+          Hi! I'm Arman, a front-end developer where i make technology meets
+          art. My formula: clean code, user-focused design, and a dash of
+          elegance.
+          <br />
+          <br />
+          I'm an architect in code, passionate about crafting both the structure
+          and beauty of websites. Driven by the excitement of bringing ideas to
+          life, I'm constantly learning and innovating.
+          <br />
+          <br />
+          Ready to create stunning, functional digital solutions? Let's make
+          something incredible together.
         </p>
-
-        <button type="button" class="about-me__cta cta">Contact me</button>
-        <button type="button" class="about-me__cta cta">Resume</button>
+        <div class="about-me__buttons">
+          <button type="button" class="about-me__cta cta">Contact me</button>
+          <button type="button" class="about-me__cta cta">Resume</button>
+        </div>
       </article>
     </main>
 
