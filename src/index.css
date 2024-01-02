@@ -15,6 +15,11 @@ RESETS=====================
   padding: 0;
 }
 
+/* Smooth scrolling when linkin in the same page */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Better readability for text rendering and line-height*/
 body {
   -webkit-font-smoothing: antialiased;
@@ -95,7 +100,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--black);
   color: var(--whitesmoke);
-  cursor: none;
+  /* cursor: none; */
 }
 
 /* Container for all main sections */
@@ -170,7 +175,7 @@ body {
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 1002;
+  /* z-index: 1002; */
   pointer-events: none;
 }
 
@@ -225,7 +230,7 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100000;
+  z-index: 10;
   scale: 0 1;
   transform-origin: left;
   animation: scroll-watcher linear;
@@ -266,12 +271,12 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 3- HAMBURGER MENU */
 .hamburger-wrapper {
-  z-index: 1001;
   width: var(--hamburger-wrapper-width);
   height: var(--hamburger-wrapper-height);
   border-radius: var(--hamburger-wrapper-border-radius);
   cursor: pointer;
   display: flex;
+  z-index: 3;
 }
 
 .hamburger-icon {
@@ -412,7 +417,7 @@ SPECIFIC LAYOUT AND STYLES=
   background: var(--black);
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .show {
