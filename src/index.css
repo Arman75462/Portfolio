@@ -398,54 +398,23 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* DARKMODE/LIGHTMODE TOGGLE */
 .darkmode-toggle {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  padding: 0.5em;
+  font-size: 0.9rem;
+  border-radius: 10px;
   position: absolute;
-  bottom: 50%;
+  bottom: 15%;
   right: 10%;
+  background-color: rgb(42, 42, 42);
 }
 
-.darkmode-toggle:checked + .darkmode-label {
-  background-color: #242424;
-}
-
-.darkmode-toggle:checked + .darkmode-label:after {
-  transform: translateX(165%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
-}
-
-.darkmode-label,
-.darkmode-label:after {
-  transition: 0.4s;
-}
-
-.darkmode-label {
-  width: 2em;
-  height: 0.75em;
-  position: relative;
-  display: block;
-  background-color: #ebebeb;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.darkmode-label:after {
-  content: "";
-  width: 0.75em;
-  height: 0.75em;
-  position: absolute;
-  background: linear-gradient(180deg, #ffcc89, #d8860b);
-  border-radius: 50%;
-}
-
+/* LANGUAGE CHANGE */
 .nav__language {
   padding: 0.5em;
   font-size: 0.9rem;
   border-radius: 10px;
   background-color: rgba(0, 0, 255, 0.348);
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   right: 10%;
 }
 
