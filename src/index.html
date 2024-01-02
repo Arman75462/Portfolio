@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <!-- FAVICON  -->
     <link rel="icon" href="images/initialsDarkMode.png" type="image/x-icon" />
     <!-- TAB TITLE -->
     <title>Arman Gulistani | Front End Developer</title>
   </head>
   <body>
-    <!-- scroll-watcher -->
+    <!-- SCROLL-WATCHER -->
     <span class="scroll-watcher"></span>
+
     <!-- CUSTOM CURSOR -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
@@ -47,7 +49,6 @@
     <!-- 1- HERO SECTION -->
     <section class="hero">
       <h1 class="hero__title">
-        <span>I'm a</span>
         <br />
         Front-End
         <br />
@@ -57,7 +58,7 @@
 
       <!-- 2- IMAGE OF YOURSELF -->
       <img
-        src="images/youngMan.png"
+        src="images/youngMan.webp"
         alt="Arman Gulistani"
         class="hero__image"
       />
@@ -102,7 +103,6 @@
             class="skill__icon"
           />
           <p class="skill__name">HTML</p>
-          <p class="skill__number">1</p>
         </article>
         <article class="skill">
           <img
@@ -111,7 +111,6 @@
             class="skill__icon"
           />
           <p class="skill__name">CSS</p>
-          <p class="skill__number">2</p>
         </article>
         <article class="skill">
           <img
@@ -120,7 +119,6 @@
             class="skill__icon"
           />
           <p class="skill__name">JavaScript</p>
-          <p class="skill__number">3</p>
         </article>
         <article class="skill">
           <img
@@ -129,7 +127,6 @@
             class="skill__icon skill__icon--github"
           />
           <p class="skill__name">GitHub</p>
-          <p class="skill__number">4</p>
         </article>
         <article class="skill">
           <img
@@ -138,7 +135,6 @@
             class="skill__icon"
           />
           <p class="skill__name">Git</p>
-          <p class="skill__number">5</p>
         </article>
         <article class="skill">
           <img
@@ -147,7 +143,6 @@
             class="skill__icon"
           />
           <p class="skill__name">npm</p>
-          <p class="skill__number">6</p>
         </article>
         <article class="skill">
           <img
@@ -156,74 +151,77 @@
             class="skill__icon"
           />
           <p class="skill__name">Webpack</p>
-          <p class="skill__number">7</p>
         </article>
       </div>
     </section>
 
     <!-- 1- PROJECTS -->
     <section class="projects">
-      <h2 class="projects__title">Projects</h2>
+      <h2 class="projects__title">My work</h2>
 
-      <div class="projects__grid-container">
+      <div class="projects__container">
         <!-- 2- PROJECT 1 -->
         <article class="project project1">
-          <h3 class="project__title">EtchASketch</h3>
-          <img
-            src="images/EtchASketch.png"
-            alt="Project 1"
-            class="project__image"
-          />
-          <p class="project__description">
-            The Etch A Sketch project is a web-based drawing application that
-            allows users to create art on a grid canvas.
-          </p>
-          <a href="#" class="project__link">View Project <span>→</span></a>
+          <!-- 3- PROJECT-INFO-1 -->
+          <div class="project__info">
+            <h3 class="project__title">EtchASketch</h3>
+            <p class="project__description">
+              The Etch A Sketch project is a web-based drawing application that
+              allows users to create art on a grid canvas.
+            </p>
+            <a href="#" class="project__link">View Project</a>
+          </div>
+
+          <!-- 3- PROJECT-IMAGE-1 -->
+          <div class="project__image project__image1"></div>
         </article>
 
         <!-- 2- PROJECT 2 -->
         <article class="project project2">
-          <h3 class="project__title">Tic-Tac-Toe</h3>
-          <img
-            src="images/TicTacToe.png"
-            alt="Project 2"
-            class="project__image"
-          />
-          <p class="project__description">
-            The Tic-Tac-Toe Game is a simple web-based application that allows
-            two players to compete in the classic game of Tic-Tac-Toe.
-          </p>
-          <a href="#" class="project__link">View Project <span>→</span></a>
+          <!-- 3- PROJECT-INFO-2 -->
+          <div class="project__info">
+            <h3 class="project__title">Tic-Tac-Toe</h3>
+            <p class="project__description">
+              The Tic-Tac-Toe Game is a simple web-based application that allows
+              two players to compete in the classic game of Tic-Tac-Toe.
+            </p>
+            <a href="#" class="project__link">View Project</a>
+          </div>
+
+          <!-- 3- PROJECT-IMAGE-2 -->
+          <div class="project__image project__image2"></div>
         </article>
 
         <!-- 2- PROJECT 3 -->
         <article class="project project3">
-          <h3 class="project__title">ToDo-List</h3>
-          <img
-            src="images/ToDoList.png"
-            alt="Project 3"
-            class="project__image"
-          />
-          <p class="project__description">
-            Task Manager is a web-based application that helps you manage your
-            tasks efficiently.
-          </p>
-          <a href="#" class="project__link">View Project <span>→</span></a>
+          <!-- 3- PROJECT-INFO-3 -->
+          <div class="project__info">
+            <h3 class="project__title">ToDo-List</h3>
+            <p class="project__description">
+              Task Manager is a web-based application that helps you manage your
+              tasks efficiently.
+            </p>
+            <a href="#" class="project__link">View Project</a>
+          </div>
+
+          <!-- 3- PROJECT-IMAGE-3 -->
+          <div class="project__image project__image3"></div>
         </article>
 
         <!-- 2- PROJECT 4 -->
         <article class="project project4">
-          <h3 class="project__title">Weather-website</h3>
-          <img
-            src="images/Weather-website.png"
-            alt="Project 4"
-            class="project__image"
-          />
-          <p class="project__description">
-            Weather Website is a web-based application that allows users to
-            check weather information for different locations.
-          </p>
-          <a href="#" class="project__link">View Project <span>→</span></a>
+          <!-- 3- PROJECT-INFO-4 -->
+          <div class="project__info">
+            <h3 class="project__title">Weather-website</h3>
+            <p class="project__description">
+              Weather Website is a web-based application that allows users to
+              check weather information for different locations.
+            </p>
+            <a href="#" class="project__link">View Project</a>
+          </div>
+
+          <!-- 3- PROJECT-IMAGE-4 -->
+          <div class="project__image project__image4"></div>
         </article>
       </div>
 
@@ -237,16 +235,10 @@
         Crafting elegance in code, turning ideas into digital art.
       </p>
 
-      <!--  <p class="contact__phone">Phone: 123-123-1233</p> -->
-
       <!-- 2- CONTACT-LINKS -->
       <div class="contact__links">
         <!-- Email link -->
-        <a
-          href="mailto:armangulistani@gmail.com"
-          title="armangulistani@gmail.com"
-          class="contact__email-link"
-        >
+        <a href="mailto:armangulistani@gmail.com" class="contact__email-link">
           <img
             src="images/icons8-gmail.svg"
             alt="Gmail icon by Icons8"
@@ -273,11 +265,7 @@
         /></a>
 
         <!-- Phone number -->
-        <a
-          href="tel:+4389908805"
-          class="contact__phone"
-          title="+1 438 990 8805"
-        >
+        <a href="tel:+4389908805" class="contact__phone-link">
           <img
             src="images/icons8-phone.svg"
             alt="Phone icon by Icons8"

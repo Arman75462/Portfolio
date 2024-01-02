@@ -129,6 +129,9 @@ body {
   --whitesmoke: whitesmoke;
   --black: black;
   --cyan: #0ef;
+
+  /* Paddind left and right */
+  --padding-left-right: 1.5em;
 }
 
 /* Custom cursor styles */
@@ -154,16 +157,6 @@ body {
   border-radius: 50%;
   z-index: 1002;
   pointer-events: none;
-}
-
-/* Styles for website sections */
-.header,
-.hero,
-.about,
-.skills,
-.projects {
-  /* border: 2px solid blue; */
-  padding: 3em 1.5em;
 }
 
 /* Call to action styles */
@@ -229,12 +222,17 @@ h2 {
   }
 }
 
+/* Text font-size */
+p {
+  font-size: 15px;
+}
+
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
 /*  1- HEADER  */
 .header {
-  padding: 1em 1.5em;
+  padding: 2em var(--padding-left-right);
 }
 
 /* 2- NAV  */
@@ -425,26 +423,34 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 /* 1- HERO SECTION */
+.hero {
+  padding: 0.5em var(--padding-left-right) 4em;
+}
+
 .hero__title {
   font-size: 3rem;
 }
 
-.hero__title > span {
+.hero__title::before {
+  content: "I'm a";
   color: rgba(245, 245, 245, 0.5);
   font-size: 1.5rem;
 }
 
 .hero__cta {
-  margin-top: 2em;
+  margin: 2em 0 4em 0;
 }
 
 .hero__image {
   transform: rotateY(-30deg);
   box-shadow: 5px 5px 20px 0px var(--cyan);
-  margin: 5em 0 2em;
 }
 
 /* 1- ABOUT */
+.about {
+  padding: 4em var(--padding-left-right);
+}
+
 /* 2- ABOUT ME */
 .about-me__story {
   margin: 2em 0em 3em 0em;
@@ -461,7 +467,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 1- SKILLS */
 .skills {
-  text-align: center;
+  padding: 4em var(--padding-left-right);
 }
 
 .skills__title {
@@ -481,11 +487,20 @@ SPECIFIC LAYOUT AND STYLES=
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: center;
+  counter-increment: section-counter;
+}
+
+.skill::after {
+  content: counter(section-counter);
+  font-size: 0.7rem;
+  align-self: flex-end;
+  margin-right: 0.4em;
 }
 
 .skill:hover,
 .skill:focus {
-  transform: scale(1.05); /* Hover effect for interactivity */
+  transform: scale(1.05);
 }
 
 .skill__icon {
@@ -499,30 +514,20 @@ SPECIFIC LAYOUT AND STYLES=
   font-size: 1.1rem;
 }
 
-.skill__number {
-  display: inline;
-  font-size: 0.7rem;
-  align-self: flex-end;
-  margin-right: 0.4em;
-}
-
 /* 1- PROJECTS */
-.projects__title {
-  margin-bottom: 1em;
-  text-align: center;
+.projects {
+  padding: 5em var(--padding-left-right);
+  counter-reset: project-counter;
 }
 
-.projects__grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(em, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 1.5em;
+.projects__title {
+  margin-bottom: 2em;
+  position: relative;
 }
 
 /* PROJECT COMMON STYLES */
 .project {
-  /* border: 2px solid red; */
-  margin: 3em 0em;
+  margin-bottom: 9em;
   position: relative;
 }
 
@@ -530,29 +535,85 @@ SPECIFIC LAYOUT AND STYLES=
   font-size: 1.5rem;
   margin-bottom: 1em;
   text-align: center;
+  counter-increment: project-counter;
 }
 
-.project__image {
-  border-radius: 10px;
-  width: 80%;
-  margin: auto;
+.project__title::before {
+  content: counter(project-counter) ". ";
+  font-size: 0.95rem;
+  margin-right: 0.5em;
 }
 
 .project__description {
-  margin: 1.5em 0em;
+  margin: 0.5em 0em;
+  max-width: 60ch;
 }
 
 .project__link {
   text-decoration: underline;
 }
 
-.project__link > span {
-  font-size: 2rem;
+.project__link:hover {
+  transform: scale(1.05);
+}
+
+.project__link::after {
+  content: " \2197";
+}
+
+/* 3- PROJECT-INFO */
+.project__info {
+  /* background-color: red; */
+  max-width: 600px;
+  margin: 0 auto 3em;
+}
+
+/* 3- PROJECT-IMAGE */
+.project__image {
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  position: relative;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.project__image::after {
+  content: "";
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border: 10px solid var(--cyan);
+  top: 15%;
+  right: -15%;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/* 3- PROJECT-IMAGE-1 */
+.project__image1 {
+  background-image: url(images/EtchASketch.webp);
+}
+
+/* 3- PROJECT-IMAGE-2 */
+.project__image2 {
+  background-image: url(images/TicTacToe.webp);
+}
+
+/* 3- PROJECT-IMAGE-3 */
+.project__image3 {
+  background-image: url(images/ToDoList.webp);
+}
+
+/* 3- PROJECT-IMAGE-4 */
+.project__image4 {
+  background-image: url(images/Weather-website.webp);
 }
 
 /* 1- CONTACT */
 .contact {
-  padding: 2em 1em;
+  padding: 0em var(--padding-left-right) 1em;
+  background: linear-gradient(to bottom, black, rgb(0, 38, 38));
 }
 
 .contact__title {
@@ -569,26 +630,52 @@ SPECIFIC LAYOUT AND STYLES=
 .contact__links {
   display: flex;
   gap: 0.5em;
+  position: relative;
+}
+
+.contact__phone-link::after,
+.contact__email-link::after {
+  font-size: 0.8em;
+  position: absolute;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  bottom: 100%;
+  transform: scale(0);
+  transition: all 150ms;
+}
+
+.contact__phone-link:hover::after,
+.contact__email-link:hover::after {
+  transform: scale(1);
+}
+
+.contact__phone-link::after {
+  content: "+1 438-990-8805";
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.contact__email-link::after {
+  content: "armangulistani@gmail.com";
+  background: rgba(0, 0, 255, 0.1);
 }
 
 .contact__image {
   height: 2em;
   width: 2em;
   transition: all 0.3s;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .contact__image:hover,
 .contact__image:focus {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .contact__year-name {
   margin-top: 2em;
-  padding-top: 2em;
+  padding-top: 1em;
   text-align: center;
-  font-size: 0.7rem;
-  border-top: 1px solid rgb(55, 55, 55);
+  border-top: 1px solid var(--whitesmoke);
 }
 
 /*============================
@@ -602,3 +689,24 @@ GENERAL LAYOUT AND STYLES==
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
+
+/* div {
+  background-image: url(//unsplash.it/1000/1000);
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+}
+
+div::after {
+  content: "";
+  position: absolute;
+  border: 15px solid red;
+  top: 10%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  border-radius: 10px;
+} */
