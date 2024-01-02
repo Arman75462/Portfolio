@@ -275,7 +275,6 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 .hamburger-icon {
-  position: relative;
   width: var(--icon-width);
   height: var(--icon-height);
   margin: auto;
@@ -345,30 +344,31 @@ SPECIFIC LAYOUT AND STYLES=
 /* 3- NAV-LINKS */
 @keyframes openMenu {
   0% {
-    transform: translateY(400px);
+    transform: translate(-400px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    transform: translate(0);
     opacity: 1;
   }
 }
 
 @keyframes closeMenu {
   0% {
-    transform: translateY(0);
+    transform: translate(0);
     opacity: 1;
   }
 
   100% {
-    transform: translateY(400px);
+    transform: translate(-400px);
     opacity: 0;
   }
 }
 
 .nav__list {
   display: none;
+  position: relative;
 }
 
 .show,
@@ -401,6 +401,9 @@ SPECIFIC LAYOUT AND STYLES=
   width: 0;
   height: 0;
   visibility: hidden;
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
 }
 
 .darkmode-toggle:checked + .darkmode-label {
@@ -424,7 +427,6 @@ SPECIFIC LAYOUT AND STYLES=
   display: block;
   background-color: #ebebeb;
   border-radius: 40px;
-  box-shadow: var(--blue-box-shadow);
   cursor: pointer;
 }
 
@@ -435,6 +437,16 @@ SPECIFIC LAYOUT AND STYLES=
   position: absolute;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 50%;
+}
+
+.nav__language {
+  padding: 0.5em;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 255, 0.348);
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
 }
 
 /* 1- HERO SECTION */
@@ -542,8 +554,10 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* PROJECT COMMON STYLES */
 .project {
-  margin-bottom: 9em;
-  position: relative;
+  margin: 0 auto 9em;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
 }
 
 .project__title {
@@ -578,15 +592,13 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 3- PROJECT-INFO */
 .project__info {
-  /* background-color: red; */
-  max-width: 600px;
-  margin: 0 auto 3em;
+  margin-bottom: 3em;
 }
 
 /* 3- PROJECT-IMAGE */
 .project__image {
-  height: 200px;
-  width: 200px;
+  height: 15em;
+  width: 80%;
   background-size: cover;
   position: relative;
   border-radius: 5px;
@@ -595,8 +607,8 @@ SPECIFIC LAYOUT AND STYLES=
 
 .project__image::after {
   content: "";
-  height: 200px;
-  width: 200px;
+  height: 15em;
+  width: 100%;
   position: absolute;
   border: 10px solid var(--cyan);
   top: 15%;
@@ -608,11 +620,13 @@ SPECIFIC LAYOUT AND STYLES=
 /* 3- PROJECT-IMAGE-1 */
 .project__image1 {
   background-image: url(images/EtchASketch.webp);
+  background-position: center;
 }
 
 /* 3- PROJECT-IMAGE-2 */
 .project__image2 {
   background-image: url(images/TicTacToe.webp);
+  background-position: 25%;
 }
 
 /* 3- PROJECT-IMAGE-3 */
