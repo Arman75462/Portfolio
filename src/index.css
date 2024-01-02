@@ -207,7 +207,8 @@ body {
   border: 2px solid var(--cyan);
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:focus {
   background: linear-gradient(45deg, var(--whitesmoke), var(--black));
 }
 
@@ -247,7 +248,7 @@ SPECIFIC LAYOUT AND STYLES=
 ==============================*/
 /*  1- HEADER  */
 .header {
-  padding: 2em var(--padding-left-right);
+  padding: 1.5em var(--padding-left-right) 3.5em;
 }
 
 /* 2- NAV  */
@@ -271,7 +272,6 @@ SPECIFIC LAYOUT AND STYLES=
   border-radius: var(--hamburger-wrapper-border-radius);
   cursor: pointer;
   display: flex;
-  align-items: center;
 }
 
 .hamburger-icon {
@@ -342,6 +342,33 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 /* 3- NAV-LINKS */
+.nav__link {
+  transition: all 300ms;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.nav__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid var(--whitesmoke);
+  border-bottom: 1px solid var(--whitesmoke);
+  transform: scaleY(2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.nav__link:hover::before,
+.nav__link:focus::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
 @keyframes openMenu {
   0% {
     transform: translate(-400px);
@@ -376,7 +403,7 @@ SPECIFIC LAYOUT AND STYLES=
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  padding-left: 20%;
   position: fixed;
   font-size: 1.5rem;
   inset: 0;
@@ -398,24 +425,31 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* DARKMODE/LIGHTMODE TOGGLE */
 .darkmode-toggle {
-  padding: 0.5em;
-  font-size: 0.9rem;
-  border-radius: 10px;
-  position: absolute;
   bottom: 15%;
-  right: 10%;
   background-color: rgb(42, 42, 42);
 }
 
-/* LANGUAGE CHANGE */
+.darkmode-toggle,
 .nav__language {
   padding: 0.5em;
   font-size: 0.9rem;
   border-radius: 10px;
-  background-color: rgba(0, 0, 255, 0.348);
   position: absolute;
-  bottom: 5%;
   right: 10%;
+  transition: all 0.2s;
+}
+
+.darkmode-toggle:hover,
+.nav__language:hover,
+.darkmode-toggle:focus,
+.nav__language:focus {
+  scale: 1.2;
+}
+
+/* LANGUAGE CHANGE */
+.nav__language {
+  background-color: rgba(255, 0, 0, 0.4);
+  bottom: 5%;
 }
 
 /* 1- HERO SECTION */
@@ -551,7 +585,8 @@ SPECIFIC LAYOUT AND STYLES=
   text-decoration: underline;
 }
 
-.project__link:hover {
+.project__link:hover,
+.project__link:focus {
   transform: scale(1.05);
 }
 
@@ -643,7 +678,9 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 .contact__phone-link:hover::after,
-.contact__email-link:hover::after {
+.contact__email-link:hover::after,
+.contact__phone-link:focus::after,
+.contact__email-link:focus::after {
   transform: scale(1);
 }
 
@@ -687,24 +724,3 @@ GENERAL LAYOUT AND STYLES==
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
-
-/* div {
-  background-image: url(//unsplash.it/1000/1000);
-  height: 300px;
-  width: 300px;
-  background-size: cover;
-  position: relative;
-  border-radius: 10px;
-}
-
-div::after {
-  content: "";
-  position: absolute;
-  border: 15px solid red;
-  top: 10%;
-  right: -10%;
-  width: 300px;
-  height: 300px;
-  z-index: -1;
-  border-radius: 10px;
-} */

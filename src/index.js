@@ -7,7 +7,7 @@ const bodyElement = document.querySelector("body");
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
 
-/* Event listener for customer cursor */
+/* Event listener for custom cursor */
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
   const posY = e.clientY;
