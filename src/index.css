@@ -98,6 +98,21 @@ body {
   cursor: none;
 }
 
+/* Container for all main sections */
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* .header,
+.hero,
+.about,
+.skills,
+.projects,
+.contact {
+  border: 2px solid blue;
+} */
+
 :root {
   /* Hamburger-menu variables */
   --hamburger-wrapper-width: 3em; /* ONLY NEED TO CHANGE WRAPPER HEIGHT AND WIDTH */
@@ -131,7 +146,7 @@ body {
   --cyan: #0ef;
 
   /* Paddind left and right */
-  --padding-left-right: 1.5em;
+  --padding-left-right: 0;
 }
 
 /* Custom cursor styles */

@@ -19,262 +19,285 @@
 
     <!-- 1- HEADER -->
     <header class="header">
-      <!-- 2- NAV -->
-      <nav class="header__nav">
-        <!-- INITIALS -->
-        <p class="header__initials">AG</p>
-        <!-- 3- HABURGER MENU -->
-        <div class="hamburger-wrapper">
-          <div class="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="container">
+        <!-- 2- NAV -->
+        <nav class="header__nav">
+          <!-- INITIALS -->
+          <p class="header__initials">AG</p>
+          <!-- 3- HABURGER MENU -->
+          <div class="hamburger-wrapper">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-        </div>
-        <!-- 3- NAV-LINKS -->
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Skillset</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <!-- 3- NAV-LINKS -->
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About me</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Skillset</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
 
-          <!-- DARKMODE/LIGHTMODE TOGGLE -->
-          <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle" />
-          <label for="darkmode-toggle" class="darkmode-label"></label>
-        </ul>
-      </nav>
+            <!-- DARKMODE/LIGHTMODE TOGGLE -->
+            <input
+              type="checkbox"
+              id="darkmode-toggle"
+              class="darkmode-toggle"
+            />
+            <label for="darkmode-toggle" class="darkmode-label"></label>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- 1- HERO SECTION -->
     <section class="hero">
-      <h1 class="hero__title">
-        <br />
-        Front-End
-        <br />
-        Web Developer.
-      </h1>
-      <button type="button" class="hero__cta cta">Contact me</button>
+      <div class="container">
+        <h1 class="hero__title">
+          <br />
+          Front-End
+          <br />
+          Web Developer.
+        </h1>
+        <button type="button" class="hero__cta cta">Contact me</button>
 
-      <!-- 2- IMAGE OF YOURSELF -->
-      <img
-        src="images/youngMan.webp"
-        alt="Arman Gulistani"
-        class="hero__image"
-      />
+        <!-- 2- IMAGE OF YOURSELF -->
+        <img
+          src="images/youngMan.webp"
+          alt="Arman Gulistani"
+          class="hero__image"
+        />
+      </div>
     </section>
 
     <!-- 1- ABOUT -->
     <main class="about">
-      <!-- 2- ABOUT ME -->
-      <article class="about-me">
-        <h2 class="about-me__title">About me</h2>
-        <p class="about-me__story">
-          Hi! I'm Arman, a front-end developer where i make technology meets
-          art. My formula: clean code, user-focused design, and a dash of
-          elegance.
-          <br />
-          <br />
-          I'm an architect in code, passionate about crafting both the structure
-          and beauty of websites. Driven by the excitement of bringing ideas to
-          life, I'm constantly learning and innovating.
-          <br />
-          <br />
-          Ready to create stunning, functional digital solutions? Let's make
-          something incredible together.
-        </p>
-        <div class="about-me__buttons">
-          <button type="button" class="about-me__cta cta">Contact me</button>
-          <button type="button" class="about-me__cta cta">Resume</button>
-        </div>
-      </article>
+      <div class="container">
+        <!-- 2- ABOUT ME -->
+        <article class="about-me">
+          <h2 class="about-me__title">About me</h2>
+          <p class="about-me__story">
+            Hi! I'm Arman, a front-end developer where i make technology meets
+            art. My formula: clean code, user-focused design, and a dash of
+            elegance.
+            <br />
+            <br />
+            I'm an architect in code, passionate about crafting both the
+            structure and beauty of websites. Driven by the excitement of
+            bringing ideas to life, I'm constantly learning and innovating.
+            <br />
+            <br />
+            Ready to create stunning, functional digital solutions? Let's make
+            something incredible together.
+          </p>
+          <div class="about-me__buttons">
+            <button type="button" class="about-me__cta cta">Contact me</button>
+            <button type="button" class="about-me__cta cta">Resume</button>
+          </div>
+        </article>
+      </div>
     </main>
 
     <!-- 1- SKILLS -->
     <section class="skills">
-      <h2 class="skills__title">Skillset</h2>
+      <div class="container">
+        <h2 class="skills__title">Skillset</h2>
 
-      <!-- 2- SKILL SECTION -->
-      <div class="skills__grid-container">
-        <article class="skill">
-          <img
-            src="images/icons8-html.svg"
-            alt="HTML icon by Icons8"
-            class="skill__icon"
-          />
-          <p class="skill__name">HTML</p>
-        </article>
-        <article class="skill">
-          <img
-            src="images/icons8-css.svg"
-            alt="CSS icon by Icons8"
-            class="skill__icon"
-          />
-          <p class="skill__name">CSS</p>
-        </article>
-        <article class="skill">
-          <img
-            src="images/icons8-javascript.svg"
-            alt="JavaScript icon by Icons8n"
-            class="skill__icon"
-          />
-          <p class="skill__name">JavaScript</p>
-        </article>
-        <article class="skill">
-          <img
-            src="images/icons8-github-white.png"
-            alt="GitHub icon by Icons8"
-            class="skill__icon skill__icon--github"
-          />
-          <p class="skill__name">GitHub</p>
-        </article>
-        <article class="skill">
-          <img
-            src="images/icons8-git.svg"
-            alt="Git icon by Icons8"
-            class="skill__icon"
-          />
-          <p class="skill__name">Git</p>
-        </article>
-        <article class="skill">
-          <img
-            src="images/icons8-npm.svg"
-            alt=" NPM icon by Icons8"
-            class="skill__icon"
-          />
-          <p class="skill__name">npm</p>
-        </article>
-        <article class="skill">
-          <img
-            src="images/icons8-webpack.svg"
-            alt="Webpack icon by Icons8"
-            class="skill__icon"
-          />
-          <p class="skill__name">Webpack</p>
-        </article>
+        <!-- 2- SKILL SECTION -->
+        <div class="skills__grid-container">
+          <article class="skill">
+            <img
+              src="images/icons8-html.svg"
+              alt="HTML icon by Icons8"
+              class="skill__icon"
+            />
+            <p class="skill__name">HTML</p>
+          </article>
+          <article class="skill">
+            <img
+              src="images/icons8-css.svg"
+              alt="CSS icon by Icons8"
+              class="skill__icon"
+            />
+            <p class="skill__name">CSS</p>
+          </article>
+          <article class="skill">
+            <img
+              src="images/icons8-javascript.svg"
+              alt="JavaScript icon by Icons8n"
+              class="skill__icon"
+            />
+            <p class="skill__name">JavaScript</p>
+          </article>
+          <article class="skill">
+            <img
+              src="images/icons8-github-white.png"
+              alt="GitHub icon by Icons8"
+              class="skill__icon skill__icon--github"
+            />
+            <p class="skill__name">GitHub</p>
+          </article>
+          <article class="skill">
+            <img
+              src="images/icons8-git.svg"
+              alt="Git icon by Icons8"
+              class="skill__icon"
+            />
+            <p class="skill__name">Git</p>
+          </article>
+          <article class="skill">
+            <img
+              src="images/icons8-npm.svg"
+              alt=" NPM icon by Icons8"
+              class="skill__icon"
+            />
+            <p class="skill__name">npm</p>
+          </article>
+          <article class="skill">
+            <img
+              src="images/icons8-webpack.svg"
+              alt="Webpack icon by Icons8"
+              class="skill__icon"
+            />
+            <p class="skill__name">Webpack</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- 1- PROJECTS -->
     <section class="projects">
-      <h2 class="projects__title">My work</h2>
+      <div class="container">
+        <h2 class="projects__title">My work</h2>
 
-      <div class="projects__container">
-        <!-- 2- PROJECT 1 -->
-        <article class="project project1">
-          <!-- 3- PROJECT-INFO-1 -->
-          <div class="project__info">
-            <h3 class="project__title">EtchASketch</h3>
-            <p class="project__description">
-              The Etch A Sketch project is a web-based drawing application that
-              allows users to create art on a grid canvas.
-            </p>
-            <a href="#" class="project__link">View Project</a>
-          </div>
+        <div class="projects__container">
+          <!-- 2- PROJECT 1 -->
+          <article class="project project1">
+            <!-- 3- PROJECT-INFO-1 -->
+            <div class="project__info">
+              <h3 class="project__title">EtchASketch</h3>
+              <p class="project__description">
+                The Etch A Sketch project is a web-based drawing application
+                that allows users to create art on a grid canvas.
+              </p>
+              <a href="#" class="project__link">View Project</a>
+            </div>
 
-          <!-- 3- PROJECT-IMAGE-1 -->
-          <div class="project__image project__image1"></div>
-        </article>
+            <!-- 3- PROJECT-IMAGE-1 -->
+            <div class="project__image project__image1"></div>
+          </article>
 
-        <!-- 2- PROJECT 2 -->
-        <article class="project project2">
-          <!-- 3- PROJECT-INFO-2 -->
-          <div class="project__info">
-            <h3 class="project__title">Tic-Tac-Toe</h3>
-            <p class="project__description">
-              The Tic-Tac-Toe Game is a simple web-based application that allows
-              two players to compete in the classic game of Tic-Tac-Toe.
-            </p>
-            <a href="#" class="project__link">View Project</a>
-          </div>
+          <!-- 2- PROJECT 2 -->
+          <article class="project project2">
+            <!-- 3- PROJECT-INFO-2 -->
+            <div class="project__info">
+              <h3 class="project__title">Tic-Tac-Toe</h3>
+              <p class="project__description">
+                The Tic-Tac-Toe Game is a simple web-based application that
+                allows two players to compete in the classic game of
+                Tic-Tac-Toe.
+              </p>
+              <a href="#" class="project__link">View Project</a>
+            </div>
 
-          <!-- 3- PROJECT-IMAGE-2 -->
-          <div class="project__image project__image2"></div>
-        </article>
+            <!-- 3- PROJECT-IMAGE-2 -->
+            <div class="project__image project__image2"></div>
+          </article>
 
-        <!-- 2- PROJECT 3 -->
-        <article class="project project3">
-          <!-- 3- PROJECT-INFO-3 -->
-          <div class="project__info">
-            <h3 class="project__title">ToDo-List</h3>
-            <p class="project__description">
-              Task Manager is a web-based application that helps you manage your
-              tasks efficiently.
-            </p>
-            <a href="#" class="project__link">View Project</a>
-          </div>
+          <!-- 2- PROJECT 3 -->
+          <article class="project project3">
+            <!-- 3- PROJECT-INFO-3 -->
+            <div class="project__info">
+              <h3 class="project__title">ToDo-List</h3>
+              <p class="project__description">
+                Task Manager is a web-based application that helps you manage
+                your tasks efficiently.
+              </p>
+              <a href="#" class="project__link">View Project</a>
+            </div>
 
-          <!-- 3- PROJECT-IMAGE-3 -->
-          <div class="project__image project__image3"></div>
-        </article>
+            <!-- 3- PROJECT-IMAGE-3 -->
+            <div class="project__image project__image3"></div>
+          </article>
 
-        <!-- 2- PROJECT 4 -->
-        <article class="project project4">
-          <!-- 3- PROJECT-INFO-4 -->
-          <div class="project__info">
-            <h3 class="project__title">Weather-website</h3>
-            <p class="project__description">
-              Weather Website is a web-based application that allows users to
-              check weather information for different locations.
-            </p>
-            <a href="#" class="project__link">View Project</a>
-          </div>
+          <!-- 2- PROJECT 4 -->
+          <article class="project project4">
+            <!-- 3- PROJECT-INFO-4 -->
+            <div class="project__info">
+              <h3 class="project__title">Weather-website</h3>
+              <p class="project__description">
+                Weather Website is a web-based application that allows users to
+                check weather information for different locations.
+              </p>
+              <a href="#" class="project__link">View Project</a>
+            </div>
 
-          <!-- 3- PROJECT-IMAGE-4 -->
-          <div class="project__image project__image4"></div>
-        </article>
+            <!-- 3- PROJECT-IMAGE-4 -->
+            <div class="project__image project__image4"></div>
+          </article>
+        </div>
+
+        <!-- Add more project items as needed -->
       </div>
-
-      <!-- Add more project items as needed -->
     </section>
 
     <!-- 1- CONTACT -->
     <footer class="contact">
-      <h2 class="contact__title">AG</h2>
-      <p class="contact__summary">
-        Crafting elegance in code, turning ideas into digital art.
-      </p>
+      <div class="container">
+        <h2 class="contact__title">AG</h2>
+        <p class="contact__summary">
+          Crafting elegance in code, turning ideas into digital art.
+        </p>
 
-      <!-- 2- CONTACT-LINKS -->
-      <div class="contact__links">
-        <!-- Email link -->
-        <a href="mailto:armangulistani@gmail.com" class="contact__email-link">
-          <img
-            src="images/icons8-gmail.svg"
-            alt="Gmail icon by Icons8"
-            class="contact__image"
-          />
-        </a>
+        <!-- 2- CONTACT-LINKS -->
+        <div class="contact__links">
+          <!-- Email link -->
+          <a href="mailto:armangulistani@gmail.com" class="contact__email-link">
+            <img
+              src="images/icons8-gmail.svg"
+              alt="Gmail icon by Icons8"
+              class="contact__image"
+            />
+          </a>
 
-        <!-- Github link -->
-        <a href="https://github.com/Arman75462" class="contact__github-link"
-          ><img
-            src="images/icons8-github-white.png"
-            alt="GitHub icon by Icons8"
-            class="contact__image"
-        /></a>
+          <!-- Github link -->
+          <a href="https://github.com/Arman75462" class="contact__github-link"
+            ><img
+              src="images/icons8-github-white.png"
+              alt="GitHub icon by Icons8"
+              class="contact__image"
+          /></a>
 
-        <!-- LinkedIn link -->
-        <a
-          href="https://www.linkedin.com/in/arman-gulistani-115032263/"
-          class="contact__linkedin-link"
-          ><img
-            src="images/icons8-linkedin.svg"
-            alt="GitHub icon by Icons8"
-            class="contact__image"
-        /></a>
+          <!-- LinkedIn link -->
+          <a
+            href="https://www.linkedin.com/in/arman-gulistani-115032263/"
+            class="contact__linkedin-link"
+            ><img
+              src="images/icons8-linkedin.svg"
+              alt="GitHub icon by Icons8"
+              class="contact__image"
+          /></a>
 
-        <!-- Phone number -->
-        <a href="tel:+4389908805" class="contact__phone-link">
-          <img
-            src="images/icons8-phone.svg"
-            alt="Phone icon by Icons8"
-            class="contact__image"
-          />
-        </a>
+          <!-- Phone number -->
+          <a href="tel:+4389908805" class="contact__phone-link">
+            <img
+              src="images/icons8-phone.svg"
+              alt="Phone icon by Icons8"
+              class="contact__image"
+            />
+          </a>
+        </div>
+
+        <p class="contact__year-name">2024 Arman Gulistani.</p>
       </div>
-
-      <p class="contact__year-name">2024 Arman Gulistani.</p>
     </footer>
   </body>
 </html>
