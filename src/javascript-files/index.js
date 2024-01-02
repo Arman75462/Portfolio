@@ -1,11 +1,15 @@
-import "./index.css";
+import "../index.css";
 
-/* SELECTORS */
-const hamburgerMenuButton = document.querySelector(".hamburger-wrapper");
-const navbarLinksContainer = document.querySelector(".nav__list");
-const bodyElement = document.querySelector("body");
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorOutline = document.querySelector(".cursor-outline");
+/* SELECTORS IMPORT */
+import {
+  hamburgerMenuButton,
+  navbarLinksContainer,
+  cursorDot,
+  cursorOutline,
+} from "./selectors";
+
+/* FUNCTIONS IMPORT */
+import { hideMenu, showMenu } from "./functions";
 
 /* Event listener for custom cursor */
 window.addEventListener("mousemove", (e) => {
@@ -23,20 +27,6 @@ window.addEventListener("mousemove", (e) => {
     { duration: 500, fill: "forwards" }
   );
 });
-
-// Function to hide menu
-function hideMenu() {
-  navbarLinksContainer.classList.remove("show");
-  navbarLinksContainer.classList.add("hide");
-  bodyElement.style.overflow = "auto"; // Set overflow back to 'auto'
-}
-
-// Function to show menu
-function showMenu() {
-  navbarLinksContainer.classList.remove("hide");
-  navbarLinksContainer.classList.add("show");
-  bodyElement.style.overflow = "hidden"; // Set overflow to 'hidden'
-}
 
 // Event listener to hide menu once user clicked on a link
 navbarLinksContainer.addEventListener("click", (e) => {
