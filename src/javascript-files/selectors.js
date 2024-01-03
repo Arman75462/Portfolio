@@ -5,3 +5,4 @@ export const bodyElement = document.querySelector("body");
 export const cursorDot = document.querySelector(".cursor-dot");
 export const cursorOutline = document.querySelector(".cursor-outline");
 export const languageSwitch = document.querySelector(".nav__language");
+export const resumeLink = document.querySelector(".about-me__link");

@@ -7,6 +7,7 @@ import {
   cursorDot,
   cursorOutline,
   languageSwitch,
+  resumeLink,
 } from "./selectors";
 
 /* FUNCTIONS IMPORT */
@@ -77,8 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Initially set the background-color of languageSiwtch button to red
+  // Initially set the background-color of languageSwitch button to red
   updateLanguageSwitchColor();
+
+  function updateResumeURL() {
+    if (currentLanguage === "en") {
+      // English-CV
+      resumeLink.href =
+        "https://1drv.ms/b/s!Am8jzLlkCjx0p0KgLM2FZ5odEjjb?e=7Xgi1y";
+    } else {
+      // French-CV
+      resumeLink.href =
+        "https://1drv.ms/b/s!Am8jzLlkCjx0p0HJzkoxIyKpgm0y?e=cQQYvY";
+    }
+  }
+
+  // Initially set the URL of resumeButton to the english-CV URL
+  updateResumeURL();
 
   // Add an event listener for the click event on the language switch button
   languageSwitch.addEventListener("click", () => {
@@ -91,7 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update the text content of all translatable elements to the new language
     updateLanguageText();
 
-    // Update the background-color of languageSiwtch button, based on curretn language
+    // Update the background-color of languageSwitch button, based on current language
     updateLanguageSwitchColor();
+
+    // Update the URL of resumeLink to english-CV or french-CV, based on teh current language
+    updateResumeURL();
   });
 });
