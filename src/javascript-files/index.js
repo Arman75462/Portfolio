@@ -1,6 +1,6 @@
 import "../index.css";
 
-/* SELECTORS IMPORT */
+/* DOM SELECTORS IMPORT */
 import {
   hamburgerMenuButton,
   navbarLinksContainer,
@@ -8,10 +8,11 @@ import {
   cursorOutline,
   languageSwitch,
   resumeLink,
+  translatableElements,
 } from "./selectors";
 
 /* FUNCTIONS IMPORT */
-import { hideMenu, showMenu } from "./functions";
+import { hideMenu, showMenu } from "./DOMfunctions";
 
 /* Event listener for custom cursor */
 window.addEventListener("mousemove", (e) => {
@@ -56,8 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Define a function to update the text content of all elements that can be translated
   function updateLanguageText() {
-    // Select all elements with a 'data-lang-en' attribute
-    const translatableElements = document.querySelectorAll("[data-lang-en]");
     // Iterate over each element and update its text content based on the current language
     translatableElements.forEach((element) => {
       element.textContent =
