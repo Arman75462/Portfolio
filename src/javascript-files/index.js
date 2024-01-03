@@ -69,6 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initially set all translatable text on the page to English
   updateLanguageText();
 
+  function updateLanguageSwitchColor() {
+    if (currentLanguage === "en") {
+      languageSwitch.style.backgroundColor = "rgba(255, 0, 0, 0.4)";
+    } else {
+      languageSwitch.style.backgroundColor = "rgba(0, 0, 255, 0.4)";
+    }
+  }
+
+  // Initially set the background-color of languageSiwtch button to red
+  updateLanguageSwitchColor();
+
   // Add an event listener for the click event on the language switch button
   languageSwitch.addEventListener("click", () => {
     // Toggle the currentLanguage between 'en' and 'fr'
@@ -79,5 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update the text content of all translatable elements to the new language
     updateLanguageText();
+
+    // Update the background-color of languageSiwtch button, based on curretn language
+    updateLanguageSwitchColor();
   });
 });
