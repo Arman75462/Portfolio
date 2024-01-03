@@ -6,6 +6,7 @@ import {
   navbarLinksContainer,
   cursorDot,
   cursorOutline,
+  languageSwitch,
 } from "./selectors";
 
 /* FUNCTIONS IMPORT */
@@ -45,4 +46,38 @@ hamburgerMenuButton.addEventListener("click", () => {
   } else {
     showMenu();
   }
+});
+
+// Listen for the DOMContentLoaded event to ensure the DOM is fully loaded before executing the script
+document.addEventListener("DOMContentLoaded", () => {
+  // Set the default language to English
+  let currentLanguage = "en";
+
+  // Define a function to update the text content of all elements that can be translated
+  function updateLanguageText() {
+    // Select all elements with a 'data-lang-en' attribute
+    const translatableElements = document.querySelectorAll("[data-lang-en]");
+    // Iterate over each element and update its text content based on the current language
+    translatableElements.forEach((element) => {
+      element.textContent =
+        currentLanguage === "en"
+          ? element.getAttribute("data-lang-en") // Set text to English if currentLanguage is 'en'
+          : element.getAttribute("data-lang-fr"); // Set text to French if currentLanguage is 'fr'
+    });
+  }
+
+  // Initially set all translatable text on the page to English
+  updateLanguageText();
+
+  // Add an event listener for the click event on the language switch button
+  languageSwitch.addEventListener("click", () => {
+    // Toggle the currentLanguage between 'en' and 'fr'
+    currentLanguage = currentLanguage === "en" ? "fr" : "en";
+
+    // Update the button's text to reflect the current language
+    languageSwitch.textContent = currentLanguage.toUpperCase();
+
+    // Update the text content of all translatable elements to the new language
+    updateLanguageText();
+  });
 });

@@ -35,25 +35,52 @@
           <!-- 3- NAV-LINKS -->
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Home</a>
+              <a
+                href="#"
+                class="nav__link"
+                data-lang-en="Home"
+                data-lang-fr="Accueil"
+              ></a>
             </li>
             <li class="nav__item">
-              <a href="#about-me" class="nav__link">About me</a>
+              <a
+                href="#about-me"
+                class="nav__link"
+                data-lang-en="About me"
+                data-lang-fr="À propos de moi"
+              ></a>
             </li>
             <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
+              <a
+                href="#skills"
+                class="nav__link"
+                data-lang-en="Skills"
+                data-lang-fr="Compétences"
+              ></a>
             </li>
             <li class="nav__item">
-              <a href="#projects" class="nav__link">Projects</a>
+              <a
+                href="#projects"
+                class="nav__link"
+                data-lang-en="Projects"
+                data-lang-fr="Projets"
+              ></a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a
+                href="#contact"
+                class="nav__link"
+                data-lang-en="Contact"
+                data-lang-fr="Contact"
+              ></a>
             </li>
 
             <!-- DARKMODE/LIGHTMODE TOGGLE -->
             <button type="button" class="darkmode-toggle">🌙</button>
             <!-- LANGUAGE CHANGE -->
-            <button type="button" class="nav__language">EN</button>
+            <button type="button" class="nav__language" id="languageSwitch">
+              EN
+            </button>
           </ul>
         </nav>
       </div>
@@ -62,14 +89,18 @@
     <!-- 1- HERO SECTION -->
     <section class="hero">
       <div class="container">
-        <h1 class="hero__title">
-          <br />
-          Front-End
-          <br />
-          Web Developer.
-        </h1>
+        <h1
+          class="hero__title"
+          data-lang-en="Arman Gulistani, Front-End Web Developper"
+          data-lang-fr="Arman Gulistani,  développeur front-end."
+        ></h1>
         <a href="#contact">
-          <button type="button" class="hero__cta cta">Contact me</button>
+          <button
+            type="button"
+            class="hero__cta cta"
+            data-lang-en="Contact"
+            data-lang-fr="Contact"
+          ></button>
         </a>
 
         <!-- 2- IMAGE OF YOURSELF -->
@@ -86,28 +117,40 @@
       <div class="container">
         <!-- 2- ABOUT ME -->
         <article class="about-me">
-          <h2 class="about-me__title" id="about-me">About me</h2>
-          <p class="about-me__story">
-            Hi! I'm Arman, a front-end developer where i make technology meets
-            art. My formula: clean code, user-focused design, and a dash of
-            elegance.
-            <br />
-            <br />
-            I'm an architect in code, passionate about crafting both the
-            structure and beauty of websites. Driven by the excitement of
-            bringing ideas to life, I'm constantly learning and innovating.
-            <br />
-            <br />
-            Ready to create stunning, functional digital solutions? Let's make
-            something incredible together.
-          </p>
+          <h2
+            class="about-me__title"
+            id="about-me"
+            data-lang-en="About me"
+            data-lang-fr="À propos de moi"
+          >
+            About me
+          </h2>
+          <p
+            class="about-me__story"
+            data-lang-en="Hi! I'm Arman, a front-end developer where i make technology meets
+          art. My formula: clean code, user-focused design, and a dash of
+          elegance. I'm an architect in code, passionate about crafting both
+          the structure and beauty of websites. Driven by the excitement of
+          bringing ideas to life, I'm constantly learning and innovating.
+          Ready to create stunning, functional digital solutions? Let's make
+          something incredible together."
+            data-lang-fr="Salut ! Je suis Arman, un développeur front-end où je fais rencontrer la technologie avec l'art. Ma formule : du code propre, un design centré sur l'utilisateur, et une touche d'élégance. Je suis un architecte en programmation, passionné par la création de la structure et de la beauté des sites web. Animé par l'excitation de donner vie aux idées, j'apprends et innove constamment. Prêt à créer des solutions numériques étonnantes et fonctionnelles ? Faisons quelque chose d'incroyable ensemble."
+          ></p>
           <div class="about-me__buttons">
             <a href="#contact">
-              <button type="button" class="about-me__cta cta">
-                Contact me
-              </button>
+              <button type="button" class="about-me__cta cta">Contact</button>
             </a>
-            <button type="button" class="about-me__cta cta">Resume</button>
+            <a
+              href="https://1drv.ms/b/s!Am8jzLlkCjx0p0HJzkoxIyKpgm0y?e=4VKbv9"
+              download="CV english.pdf"
+            >
+              <button
+                type="button"
+                class="about-me__cta cta"
+                data-lang-en="Resume ↘"
+                data-lang-fr="CV ↘"
+              ></button>
+            </a>
           </div>
         </article>
       </div>
@@ -116,7 +159,12 @@
     <!-- 1- SKILLS -->
     <section class="skills">
       <div class="container">
-        <h2 class="skills__title" id="skills">Skillset</h2>
+        <h2
+          class="skills__title"
+          id="skills"
+          data-lang-en="Skillset"
+          data-lang-fr="Compétences"
+        ></h2>
 
         <!-- 2- SKILL SECTION -->
         <div class="skills__grid-container">
@@ -183,18 +231,30 @@
     <!-- 1- PROJECTS -->
     <section class="projects">
       <div class="container">
-        <h2 class="projects__title" id="projects">My projects</h2>
+        <h2
+          class="projects__title"
+          id="projects"
+          data-lang-en="My projects"
+          data-lang-fr="Mes projets"
+        ></h2>
 
         <!-- 2- PROJECT 1 -->
         <article class="project project1">
           <!-- 3- PROJECT-INFO-1 -->
           <div class="project__info">
             <h3 class="project__title">EtchASketch</h3>
-            <p class="project__description">
-              The Etch A Sketch project is a web-based drawing application that
-              allows users to create art on a grid canvas.
-            </p>
-            <a href="#" class="project__link">View Project</a>
+            <p
+              class="project__description"
+              data-lang-en="The Etch A Sketch project is a web-based drawing application that
+            allows users to create art on a grid canvas."
+              data-lang-fr="Le projet 'Etch A Sketch' est une application de dessin basée sur le web qui permet aux utilisateurs de créer de l'art sur un canevas en grille."
+            ></p>
+            <a
+              href="#"
+              class="project__link"
+              data-lang-en="View Project"
+              data-lang-fr="Voir projet"
+            ></a>
           </div>
 
           <!-- 3- PROJECT-IMAGE-1 -->
@@ -206,11 +266,18 @@
           <!-- 3- PROJECT-INFO-2 -->
           <div class="project__info">
             <h3 class="project__title">Tic-Tac-Toe</h3>
-            <p class="project__description">
-              The Tic-Tac-Toe Game is a simple web-based application that allows
-              two players to compete in the classic game of Tic-Tac-Toe.
-            </p>
-            <a href="#" class="project__link">View Project</a>
+            <p
+              class="project__description"
+              data-lang-en="The Tic-Tac-Toe Game is a simple web-based application that allows
+            two players to compete in the classic game of Tic-Tac-Toe."
+              data-lang-fr="Le jeu 'Tic-Tac-Toe' est une application web simple qui permet à deux joueurs de s'affronter dans le jeu classique de Tic-Tac-Toe."
+            ></p>
+            <a
+              href="#"
+              class="project__link"
+              data-lang-en="View Project"
+              data-lang-fr="Voir projet"
+            ></a>
           </div>
 
           <!-- 3- PROJECT-IMAGE-2 -->
@@ -222,11 +289,18 @@
           <!-- 3- PROJECT-INFO-3 -->
           <div class="project__info">
             <h3 class="project__title">ToDo-List</h3>
-            <p class="project__description">
-              Task Manager is a web-based application that helps you manage your
-              tasks efficiently.
-            </p>
-            <a href="#" class="project__link">View Project</a>
+            <p
+              class="project__description"
+              data-lang-en="Task Manager is a web-based application that helps you manage your
+            tasks efficiently."
+              data-lang-fr="Task Manager est une application web qui vous aide à gérer vos tâches de manière efficace."
+            ></p>
+            <a
+              href="#"
+              class="project__link"
+              data-lang-en="View Project"
+              data-lang-fr="Voir projet"
+            ></a>
           </div>
 
           <!-- 3- PROJECT-IMAGE-3 -->
@@ -238,11 +312,18 @@
           <!-- 3- PROJECT-INFO-4 -->
           <div class="project__info">
             <h3 class="project__title">Weather-website</h3>
-            <p class="project__description">
-              Weather Website is a web-based application that allows users to
-              check weather information for different locations.
-            </p>
-            <a href="#" class="project__link">View Project</a>
+            <p
+              class="project__description"
+              data-lang-en="Weather Website is a web-based application that allows users to
+            check weather information for different locations."
+              data-lang-fr="e site 'Weather Website' est une application web qui permet aux utilisateurs de vérifier les informations météorologiques pour différents lieux."
+            ></p>
+            <a
+              href="#"
+              class="project__link"
+              data-lang-en="View Project"
+              data-lang-fr="Voir projet"
+            ></a>
           </div>
 
           <!-- 3- PROJECT-IMAGE-4 -->
@@ -257,9 +338,11 @@
     <footer class="contact">
       <div class="container">
         <h2 class="contact__title" id="contact">AG</h2>
-        <p class="contact__summary">
-          Crafting elegance in code, turning ideas into digital art.
-        </p>
+        <p
+          class="contact__summary"
+          data-lang-en=" Crafting elegance in code, turning ideas into digital art."
+          data-lang-fr="Façonner l'élégance dans le code, transformer les idées en art numérique."
+        ></p>
 
         <!-- 2- CONTACT-LINKS -->
         <div class="contact__links">
