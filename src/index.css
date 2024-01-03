@@ -249,6 +249,12 @@ p {
   font-size: 15px;
 }
 
+/* Add border-top for each section title for aesthetics and a better UX */
+.section__title {
+  padding-top: 0.5em;
+  border-top: 0.5px solid var(--whitesmoke);
+}
+
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
@@ -709,9 +715,9 @@ SPECIFIC LAYOUT AND STYLES=
 
 .contact__year-name {
   margin-top: 2em;
+  border-top: 1px solid var(--whitesmoke);
   padding-top: 1em;
   text-align: center;
-  border-top: 1px solid var(--whitesmoke);
 }
 
 /*============================
