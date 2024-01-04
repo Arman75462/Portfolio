@@ -90,16 +90,16 @@
     <section class="hero">
       <div class="container">
         <h1 class="hero__title">
-          <span
-            class="hero__my-name"
-            data-lang-en="Arman Gulistani, "
-            data-lang-fr="Arman Gulistani, "
-          ></span>
-          <span
+          <div
+            class="hero__name"
+            data-lang-en="Arman Gulistani"
+            data-lang-fr="Arman Gulistani"
+          ></div>
+          <div
             class="hero__profession"
-            data-lang-en="Front-End Web Developper"
-            data-lang-fr="Développeur Web Front-End"
-          ></span>
+            data-lang-en="Front End Developer"
+            data-lang-fr="Développeur Front End"
+          ></div>
         </h1>
         <a href="#contact">
           <button
@@ -168,6 +168,7 @@
         <div class="skills__grid-container">
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-html-144.png"
               alt="HTML icon by Icons8"
               class="skill__icon"
@@ -176,6 +177,7 @@
           </article>
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-css-144.png"
               alt="CSS icon by Icons8"
               class="skill__icon"
@@ -184,6 +186,7 @@
           </article>
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-javascript-144.png"
               alt="JavaScript icon by Icons8n"
               class="skill__icon"
@@ -192,6 +195,7 @@
           </article>
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-github-white.png"
               alt="GitHub icon by Icons8"
               class="skill__icon skill__icon--github"
@@ -200,6 +204,7 @@
           </article>
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-git-144.png"
               alt="Git icon by Icons8"
               class="skill__icon"
@@ -208,6 +213,7 @@
           </article>
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-npm-144.png"
               alt=" NPM icon by Icons8"
               class="skill__icon"
@@ -216,6 +222,7 @@
           </article>
           <article class="skill">
             <img
+              loading="lazy"
               src="images/icons8-webpack-144.png"
               alt="Webpack icon by Icons8"
               class="skill__icon"
@@ -335,53 +342,68 @@
     <!-- 1- CONTACT -->
     <footer class="contact">
       <div class="container">
-        <h2 class="contact__title section__title" id="contact">AG</h2>
-        <p
-          class="contact__summary"
-          data-lang-en=" Crafting elegance in code, turning ideas into digital art."
-          data-lang-fr="Façonner l'élégance dans le code, transformer les idées en art numérique."
-        ></p>
+        <h2 class="contact__title" id="contact">Contact</h2>
+        <h3
+          class="contact__summary-title"
+          data-lang-en="Drop me a message"
+          data-lang-fr="Laisse moi un message"
+        ></h3>
+        <p class="contact__summary">
+          This is the end! I hope you've gained a good insight into my skills
+          and experiences. If you have opportunities or questions, I’m just a
+          message away. Let's explore how we can contribute to mutual success!
+        </p>
 
-        <!-- 2- CONTACT-LINKS -->
-        <div class="contact__links">
-          <!-- Email link -->
-          <a href="mailto:armangulistani@gmail.com" class="contact__email-link">
-            <img
-              src="images/icons8-gmail-144.png"
-              alt="Gmail icon by Icons8"
-              class="contact__image"
-            />
-          </a>
-
-          <!-- Github link -->
-          <a href="https://github.com/Arman75462" class="contact__github-link"
-            ><img
-              src="images/icons8-github-white.png"
-              alt="GitHub icon by Icons8"
-              class="contact__image"
-          /></a>
-
-          <!-- LinkedIn link -->
-          <a
-            href="https://www.linkedin.com/in/arman-gulistani-115032263/"
-            class="contact__linkedin-link"
-            ><img
-              src="images/icons8-linkedin-144.png"
-              alt="LinkedIn icon by Icons8"
-              class="contact__image"
-          /></a>
-
+        <!-- 2- CONTACT-INFO -->
+        <section class="contact__info">
           <!-- Phone number -->
-          <a href="tel:+4389908805" class="contact__phone-link">
+          <article class="contact__info-item">
             <img
+              loading="lazy"
               src="images/icons8-phone-144.png"
               alt="Phone icon by Icons8"
-              class="contact__image"
+              class="contact__info-image"
             />
-          </a>
-        </div>
+            <p class="contact__info-phone">+1 438 990 8805</p>
+          </article>
 
-        <p class="contact__year-name">2024 Arman Gulistani.</p>
+          <!-- Email link -->
+          <article class="contact__info-item">
+            <img
+              loading="lazy"
+              src="images/icons8-gmail-144.png"
+              alt="Gmail icon by Icons8"
+              class="contact__info-image"
+            />
+            <p class="contact__info-email">armangulistani@gmail.com</p>
+          </article>
+        </section>
+
+        <!-- 2-  -->
+        <div class="contact__signature">
+          <p class="contact__year-name">2024 Arman Gulistani.</p>
+
+          <!-- 2- CONTACT-LINKS -->
+          <div class="contact__links">
+            <!-- Github link -->
+            <a href="https://github.com/Arman75462" class="contact__github-link"
+              ><img
+                src="images/icons8-github-white.png"
+                alt="GitHub icon by Icons8"
+                class="contact__links-image"
+            /></a>
+
+            <!-- LinkedIn link -->
+            <a
+              href="https://www.linkedin.com/in/arman-gulistani-115032263/"
+              class="contact__linkedin-link"
+              ><img
+                src="images/icons8-linkedin-144.png"
+                alt="LinkedIn icon by Icons8"
+                class="contact__links-image"
+            /></a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

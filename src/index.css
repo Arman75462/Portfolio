@@ -247,6 +247,7 @@ h2 {
 /* Text font-size */
 p {
   font-size: 15px;
+  max-width: 60ch;
 }
 
 /* Add border-top for each section title for aesthetics and a better UX */
@@ -260,7 +261,7 @@ SPECIFIC LAYOUT AND STYLES=
 ==============================*/
 /*  1- HEADER  */
 .header {
-  padding: 1.5em var(--padding-left-right) 3.5em;
+  padding: 1.5em var(--padding-left-right) 3em;
 }
 
 /* 2- NAV  */
@@ -470,7 +471,15 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 .hero__title {
-  font-size: 3rem;
+  font-size: 2.4rem;
+}
+
+.hero__profession {
+  margin-top: 0.3em;
+}
+
+.hero__name {
+  font-weight: 200;
 }
 
 .hero__cta {
@@ -621,7 +630,7 @@ SPECIFIC LAYOUT AND STYLES=
   height: 15em;
   width: 100%;
   position: absolute;
-  border: 10px solid var(--cyan);
+  border: 10px solid rgba(0, 255, 255, 0.506);
   top: 15%;
   right: -15%;
   z-index: -1;
@@ -652,72 +661,94 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 1- CONTACT */
 .contact {
-  padding: 0em var(--padding-left-right) 1em;
-  background: linear-gradient(to bottom, black, rgb(0, 38, 38));
+  padding: 2em var(--padding-left-right);
+  background: linear-gradient(to top, black, rgb(0, 38, 38));
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
 }
 
 .contact__title {
-  font-family: "Petit Formal Script", cursive;
-  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5em;
 }
 
-.contact__summary {
-  margin: 2em 0;
+.contact__summary-title {
   width: 80%;
 }
 
-/* 2- CONTACT-LINKS */
-.contact__links {
-  display: flex;
-  gap: 0.5em;
+.contact__summary {
+  margin-top: 0.7em;
+}
+
+/* 2- CONTACT-INFO */
+.contact__info {
+  margin: 2em 0 3em;
   position: relative;
 }
 
-.contact__phone-link::after,
-.contact__email-link::after {
-  font-size: 0.8em;
-  position: absolute;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  bottom: 100%;
-  transform: scale(0);
-  transition: all 150ms;
+.contact__info-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
 }
 
-.contact__phone-link:hover::after,
-.contact__email-link:hover::after,
-.contact__phone-link:focus::after,
-.contact__email-link:focus::after {
-  transform: scale(1);
+.contact__info-image {
+  height: 3em;
+  width: 3em;
+  transition: all 0.3s;
+  opacity: 1;
 }
 
-.contact__phone-link::after {
-  content: "+1 438-990-8805";
-  background-color: rgba(0, 255, 0, 0.1);
+.contact__info-image:hover,
+.contact__info-image:focus {
+  opacity: 0.5;
 }
 
-.contact__email-link::after {
-  content: "armangulistani@gmail.com";
-  background: rgba(0, 0, 255, 0.1);
+.contact__info-phone {
+  background: linear-gradient(90deg, var(--whitesmoke), lime);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%, 100%;
 }
 
-.contact__image {
+.contact__info-email {
+  background: linear-gradient(
+    90deg,
+    rgb(0, 128, 255),
+    rgb(255, 61, 61),
+    rgb(255, 217, 0),
+    lime
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%, 100%;
+}
+
+/* 2- CONTACT-LINKS */
+.contact__signature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5em;
+  border-top: 1px solid var(--whitesmoke);
+}
+
+.contact__links {
+  display: flex;
+  gap: 0.5em;
+}
+
+.contact__links-image {
   height: 2em;
   width: 2em;
   transition: all 0.3s;
   opacity: 1;
 }
 
-.contact__image:hover,
-.contact__image:focus {
+.contact__links-image:hover,
+.contact__links-image:focus {
   opacity: 0.5;
-}
-
-.contact__year-name {
-  margin-top: 2em;
-  border-top: 1px solid var(--whitesmoke);
-  padding-top: 1em;
-  text-align: center;
 }
 
 /*============================
