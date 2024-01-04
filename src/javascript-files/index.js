@@ -9,12 +9,13 @@ import {
   languageSwitch,
   resumeLink,
   translatableElements,
+  toggleThemeButton,
 } from "./selectors";
 
 /* FUNCTIONS IMPORT */
 import { hideMenu, showMenu } from "./DOMfunctions";
 
-/* Event listener for custom cursor */
+/* Event listener to make the custom cursor work */
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
   const posY = e.clientY;
@@ -39,7 +40,7 @@ navbarLinksContainer.addEventListener("click", (e) => {
   }
 });
 
-// Event listener for hamburger menu
+// Event listener to toggle hamburger menu between closing and opening when clicking it
 hamburgerMenuButton.addEventListener("click", () => {
   hamburgerMenuButton.classList.toggle("active");
 
@@ -50,7 +51,7 @@ hamburgerMenuButton.addEventListener("click", () => {
   }
 });
 
-// Listen for the DOMContentLoaded event to ensure the DOM is fully loaded before executing the script
+// Event to translate language of website when clicking on languageSwitch button
 document.addEventListener("DOMContentLoaded", () => {
   // Set the default language to English
   let currentLanguage = "en";
@@ -112,4 +113,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update the URL of resumeLink to english-CV or french-CV, based on teh current language
     updateResumeURL();
   });
+});
+
+// Toggle theme between darkmode and lightmode when clicking toggleThemeButton
+toggleThemeButton.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  // If the website in in light-mode, put ☀️ for the toggleTHemeButton's textContent. If not, put 🌛
+  if (document.body.classList.contains("light-mode")) {
+    toggleThemeButton.textContent = "☀️";
+  } else {
+    toggleThemeButton.textContent = "🌛";
+  }
 });
