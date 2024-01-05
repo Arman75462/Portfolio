@@ -20,7 +20,7 @@ RESETS=====================
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
-    scroll-padding-top: 3rem; /* Offset for fixed headers or navbars */
+    scroll-padding-top: 2rem; /* Offset for fixed headers or navbars */
   }
 }
 
@@ -125,7 +125,7 @@ body.light-mode {
 .skills,
 .projects,
 .contact {
-  border: 2px solid blue 
+  border: 2px solid blue;
 } */
 
 :root {
@@ -603,7 +603,6 @@ SPECIFIC LAYOUT AND STYLES=
   margin: 0 auto 9em;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
 }
 
 .project__title {

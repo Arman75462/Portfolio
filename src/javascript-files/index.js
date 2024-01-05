@@ -40,8 +40,10 @@ window.addEventListener("mousemove", (e) => {
 // Event listener to hide menu once user clicked on a link
 navbarLinksContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav__link")) {
-    hamburgerMenuButton.classList.toggle("active");
-    hideMenu();
+    if (window.innerWidth <= 800) {
+      hamburgerMenuButton.classList.toggle("active");
+      hideMenu();
+    }
   }
 });
 

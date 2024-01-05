@@ -19,7 +19,7 @@
 
     <!-- 1- HEADER -->
     <header class="header">
-      <div class="container">
+      <div class="header__container container">
         <!-- 2- NAV -->
         <nav class="header__nav">
           <!-- INITIALS -->
@@ -47,7 +47,7 @@
                 href="#about-me"
                 class="nav__link"
                 data-lang-en="About me"
-                data-lang-fr="À propos de moi"
+                data-lang-fr="À propos"
               ></a>
             </li>
             <li class="nav__item">
@@ -88,28 +88,30 @@
 
     <!-- 1- HERO SECTION -->
     <section class="hero">
-      <div class="container">
-        <h1 class="hero__title">
-          <div
-            class="hero__name"
-            data-lang-en="Arman Gulistani"
-            data-lang-fr="Arman Gulistani"
-          ></div>
-          <div
-            class="hero__profession"
-            data-lang-en="Front End Developer"
-            data-lang-fr="Développeur Front End"
-          ></div>
-        </h1>
-        <a href="#contact">
-          <button
-            type="button"
-            class="hero__cta cta"
-            data-lang-en="Contact"
-            data-lang-fr="Contact"
-          ></button>
-        </a>
-
+      <div class="hero__container container">
+        <!-- Just a flex container -->
+        <div>
+          <h1 class="hero__title">
+            <div
+              class="hero__name"
+              data-lang-en="Arman Gulistani"
+              data-lang-fr="Arman Gulistani"
+            ></div>
+            <div
+              class="hero__profession"
+              data-lang-en="Front End Developer"
+              data-lang-fr="Développeur Front End"
+            ></div>
+          </h1>
+          <a href="#contact">
+            <button
+              type="button"
+              class="hero__cta cta"
+              data-lang-en="Contact"
+              data-lang-fr="Contact"
+            ></button>
+          </a>
+        </div>
         <!-- 2- IMAGE OF YOURSELF -->
         <img
           src="images/Arman.webp"
@@ -128,7 +130,7 @@
             class="about-me__title section__title"
             id="about-me"
             data-lang-en="About me"
-            data-lang-fr="À propos de moi"
+            data-lang-fr="À propos"
           >
             About me
           </h2>
@@ -166,7 +168,7 @@
 
     <!-- 1- SKILLS -->
     <section class="skills">
-      <div class="container">
+      <div class="skills__container container">
         <h2
           class="skills__title section__title"
           id="skills"
@@ -245,7 +247,7 @@
 
     <!-- 1- PROJECTS -->
     <section class="projects">
-      <div class="container">
+      <div class="projects__container container">
         <h2
           class="projects__title section__title"
           id="projects"
@@ -260,9 +262,8 @@
             <h3 class="project__title">EtchASketch</h3>
             <p
               class="project__description"
-              data-lang-en="The Etch A Sketch project is a web-based drawing application that
-            allows users to create art on a grid canvas."
-              data-lang-fr="Le projet 'Etch A Sketch' est une application de dessin basée sur le web qui permet aux utilisateurs de créer de l'art sur un canevas en grille."
+              data-lang-en="The Etch A Sketch project is a creative and interactive web-based drawing application designed to emulate the classic Etch A Sketch toy. This application provides a virtual grid canvas where users can create detailed pixel art."
+              data-lang-fr="le projet Etch A Sketch est une application de dessin interactive et créative basée sur le web, conçue pour émuler le jouet classique Etch A Sketch. Cette application fournit un canevas virtuel en grille où les utilisateurs peuvent créer des œuvres d'art en pixel détaillées."
             ></p>
             <a
               href="#"
@@ -283,9 +284,8 @@
             <h3 class="project__title">Tic-Tac-Toe</h3>
             <p
               class="project__description"
-              data-lang-en="The Tic-Tac-Toe Game is a simple web-based application that allows
-            two players to compete in the classic game of Tic-Tac-Toe."
-              data-lang-fr="Le jeu 'Tic-Tac-Toe' est une application web simple qui permet à deux joueurs de s'affronter dans le jeu classique de Tic-Tac-Toe."
+              data-lang-en="The Tic-Tac-Toe Game is an engaging and user-friendly web-based application that brings the timeless game of Tic-Tac-Toe to a digital platform. This application allows two players to engage in the classic game, which involves placing 'X's and 'O's in a 3x3 grid, with the goal of being the first to line up three of their symbols either horizontally, vertically, or diagonally."
+              data-lang-fr="Le jeu de Tic-Tac-Toe est une application web attrayante et facile à utiliser qui transporte le jeu intemporel de Tic-Tac-Toe sur une plateforme numérique. Cette application permet à deux joueurs de participer au jeu classique, qui consiste à placer des 'X' et des 'O' dans une grille 3x3, avec pour objectif d'être le premier à aligner trois de leurs symboles, horizontalement, verticalement, ou en diagonale."
             ></p>
             <a
               href="#"
@@ -306,9 +306,8 @@
             <h3 class="project__title">ToDo-List</h3>
             <p
               class="project__description"
-              data-lang-en="Task Manager is a web-based application that helps you manage your
-            tasks efficiently."
-              data-lang-fr="Task Manager est une application web qui vous aide à gérer vos tâches de manière efficace."
+              data-lang-en="The Task Manager is a user-friendly web-based application designed to help individuals manage their daily tasks efficiently. This application enables users to quickly add, organize, and prioritize tasks, ensuring they stay on top of their workload."
+              data-lang-fr="Task Manager est une application web conviviale conçue pour aider les individus à gérer leurs tâches quotidiennes de manière efficace. Cette application permet aux utilisateurs d'ajouter, d'organiser et de prioriser rapidement les tâches, assurant ainsi qu'ils restent à jour avec leur charge de travail."
             ></p>
             <a
               href="#"
@@ -329,9 +328,8 @@
             <h3 class="project__title">Weather-website</h3>
             <p
               class="project__description"
-              data-lang-en="Weather Website is a web-based application that allows users to
-            check weather information for different locations."
-              data-lang-fr="e site 'Weather Website' est une application web qui permet aux utilisateurs de vérifier les informations météorologiques pour différents lieux."
+              data-lang-en="The Weather Website is a user-friendly, web-based application designed to provide users with comprehensive weather information for various locations around the world. This application is tailored for anyone needing accurate and up-to-date weather data, whether for planning travel, outdoor activities, or just daily life."
+              data-lang-fr="Weather Website est une application web conviviale conçue pour fournir aux utilisateurs des informations météorologiques complètes pour différents endroits dans le monde. Cette application est adaptée pour tous ceux qui ont besoin de données météorologiques précises et à jour, que ce soit pour planifier des voyages, des activités en plein air, ou simplement pour la vie quotidienne."
             ></p>
             <a
               href="#"
@@ -351,7 +349,7 @@
 
     <!-- 1- CONTACT -->
     <footer class="contact">
-      <div class="container">
+      <div class="contact__container container">
         <h2 class="contact__title section__title" id="contact">Contact</h2>
         <h3
           class="contact__summary-title"
