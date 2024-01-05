@@ -15,9 +15,13 @@ RESETS=====================
   padding: 0;
 }
 
-/* Smooth scrolling when linkin in the same page */
-html {
-  scroll-behavior: smooth;
+/* Enable smooth scrolling for same-page links, 
+   effective only for users without preference for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem; /* Offset for fixed headers or navbars */
+  }
 }
 
 /* Better readability for text rendering and line-height*/
@@ -34,6 +38,14 @@ h4,
 h5,
 h6 {
   line-height: 1;
+  text-wrap: balance; /* Distribute text evenly in headings */
+}
+
+/* Improve paragraph readability with controlled text wrapping and width */
+p {
+  text-wrap: pretty; /* Enhanced wrapping for paragraphs */
+  max-width: 60ch; /* Max width based on character count for optimal reading */
+  font-size: 15px;
 }
 
 /* Remove default list styling */
@@ -59,17 +71,6 @@ textarea,
 select {
   font: inherit;
   color: inherit;
-}
-
-/* Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
 }
 
 /* Improved focus styles */
@@ -268,12 +269,6 @@ h2 {
   to {
     scale: 1 1;
   }
-}
-
-/* Text font-size */
-p {
-  font-size: 15px;
-  max-width: 60ch;
 }
 
 /* Add border-top for each section title for aesthetics and a better UX */
@@ -631,11 +626,12 @@ SPECIFIC LAYOUT AND STYLES=
 
 .project__link {
   text-decoration: underline;
+  transition: all 300ms;
 }
 
 .project__link:hover,
 .project__link:focus {
-  transform: scale(1.05);
+  opacity: 0.5;
 }
 
 .project__link::after {
@@ -698,6 +694,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 .contact__title {
   margin-bottom: 1.5em;
+  position: relative;
 }
 
 .contact__summary-title {
@@ -725,12 +722,6 @@ SPECIFIC LAYOUT AND STYLES=
   height: 3em;
   width: 3em;
   transition: all 0.3s;
-  opacity: 1;
-}
-
-.contact__info-image:hover,
-.contact__info-image:focus {
-  opacity: 0.5;
 }
 
 /* 2- CONTACT-LINKS */
