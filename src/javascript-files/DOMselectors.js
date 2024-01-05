@@ -7,6 +7,10 @@ export const cursorOutline = document.querySelector(".cursor-outline");
 export const languageSwitch = document.querySelector(".nav__language");
 export const resumeLink = document.querySelector(".about-me__link");
 export const toggleThemeButton = document.querySelector(".theme-toggle");
+export const skillIconGithub = document.querySelector(".skill__icon--github");
+export const contactLinkImageGithub = document.querySelector(
+  ".contact__links-image--github"
+);
 
 // Select all elements with a 'data-lang-en' attribute
 export const translatableElements = document.querySelectorAll("[data-lang-en]");

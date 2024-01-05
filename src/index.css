@@ -106,7 +106,8 @@ body {
 /* Website styles for light-mode theme */
 body.light-mode {
   --text-color: var(--light-mode-text-color);
-  --button-color: var(--light-mode-button-color);
+  --button-text-color: var(--light-mode-button-text-color);
+  --button-background-color: var(--light-mode-button-color);
   --body-background-color: var(--light-mode-body-background-color);
   --striking-color: var(--light-mode-striking-color);
 }
@@ -148,19 +149,29 @@ body.light-mode {
 
   /* Dark-mode colors */
   --text-color: whitesmoke;
-  --button-color: black;
-  --body-background-color: black;
+  --button-text-color: rgb(10, 10, 10);
+  --button-background-color: linear-gradient(to right, #deffff, #9bffff);
+  --body-background-color: linear-gradient(
+    to right,
+    rgb(10, 10, 10),
+    rgb(0, 0, 41)
+  );
   --striking-color: cyan;
 
   /* Light-mode colors */
-  --light-mode-text-color: black;
-  --light-mode-button-color: whitesmoke;
+  --light-mode-text-color: rgb(10, 10, 10);
+  --light-mode-button-text-color: whitesmoke;
+  --light-mode-button-color: linear-gradient(
+    to right,
+    rgb(59, 59, 255),
+    rgb(0, 0, 85)
+  );
   --light-mode-body-background-color: linear-gradient(
     to right,
-    rgb(196, 255, 255),
-    rgb(116, 255, 255)
+    #f6ffff,
+    #bdffff
   );
-  --light-mode-striking-color: rgb(0, 0, 255);
+  --light-mode-striking-color: rgb(0, 0, 171);
 
   /* Padding left and right */
   --padding-left-right: 0;
@@ -194,7 +205,7 @@ body.light-mode {
 
 /* Call to action styles */
 .cta {
-  background: var(--button-color);
+  background: var(--button-background-color);
   padding: 0.6em 1.3em;
   border-radius: 1em;
   box-shadow:
@@ -205,7 +216,7 @@ body.light-mode {
   transition: all 0.3s;
   font-weight: 500;
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: var(--button-text-color);
 }
 
 .cta:hover,
@@ -225,18 +236,12 @@ body.light-mode {
 
 ::-webkit-scrollbar-track {
   background: var(--body-background-color);
-  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--body-background-color);
-  border-radius: 10px;
-  border: 2px solid var(--striking-color);
-}
-
-::-webkit-scrollbar-thumb:hover,
-::-webkit-scrollbar-thumb:focus {
-  background: linear-gradient(45deg, var(--text-color), var(--striking-color));
+  background: linear-gradient(45deg, var(--text-color), var(--s));
+  border-radius: 7px;
+  border: 3px solid var(--striking-color);
 }
 
 /* Font-size for all sections font-size */
@@ -461,7 +466,7 @@ SPECIFIC LAYOUT AND STYLES=
 /* DARKMODE/LIGHTMODE TOGGLE */
 .theme-toggle {
   bottom: 15%;
-  background: rgb(22, 22, 22);
+  background: lightslategray;
 }
 
 .theme-toggle,
@@ -518,13 +523,18 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 /* 2- ABOUT ME */
+.about-me__title {
+  margin-bottom: 1.5em;
+}
+
 .about-me__story {
-  margin: 2em 0em 3em 0em;
+  margin-bottom: 1em;
 }
 
 .about-me__cta {
   padding: 0.4em 1.1em;
   gap: 0.4em;
+  margin-top: 2em;
 }
 
 .about-me__buttons {
@@ -574,6 +584,7 @@ SPECIFIC LAYOUT AND STYLES=
   height: 4em;
   width: 4em;
   margin: 0 auto;
+  opacity: 0.6;
 }
 
 .skill__name {

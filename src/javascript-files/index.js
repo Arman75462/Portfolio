@@ -10,10 +10,15 @@ import {
   resumeLink,
   translatableElements,
   toggleThemeButton,
-} from "./selectors";
+} from "./DOMselectors";
 
 /* FUNCTIONS IMPORT */
-import { hideMenu, showMenu } from "./DOMfunctions";
+import {
+  hideMenu,
+  showMenu,
+  switchGithubIcon,
+  switchThemeButtonText,
+} from "./functions";
 
 /* Event listener to make the custom cursor work */
 window.addEventListener("mousemove", (e) => {
@@ -70,9 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initially set all translatable text on the page to English
   updateLanguageText();
 
+  // Update languageSwitch button, depending on website language
   function updateLanguageSwitchColor() {
     if (currentLanguage === "en") {
-      languageSwitch.style.backgroundColor = "rgba(255, 0, 0, 0.4)";
+      languageSwitch.style.backgroundColor = "rgba(255, 0, 0, 0.6)";
     } else {
       languageSwitch.style.backgroundColor = "rgba(0, 0, 255, 0.4)";
     }
@@ -81,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initially set the background-color of languageSwitch button to red
   updateLanguageSwitchColor();
 
+  // Update resume URL, depending on website language
   function updateResumeURL() {
     if (currentLanguage === "en") {
       // English-CV
@@ -119,10 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
 toggleThemeButton.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 
-  // If the website in in light-mode, put ☀️ for the toggleTHemeButton's textContent. If not, put 🌛
-  if (document.body.classList.contains("light-mode")) {
-    toggleThemeButton.textContent = "☀️";
-  } else {
-    toggleThemeButton.textContent = "🌛";
-  }
+  // Toggle theme between darkmode and lightmode when clicking toggleThemeButton
+  switchThemeButtonText();
+
+  // Switch GitHub icon, depending on background-color
+  switchGithubIcon();
 });
