@@ -508,8 +508,8 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 .hero__image {
-  transform: rotateY(-30deg);
-  box-shadow: 5px 5px 20px 0px var(--striking-color);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px 0px var(--striking-color);
 }
 
 /* 1- ABOUT */
@@ -589,7 +589,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 1- PROJECTS */
 .projects {
-  padding: 5em var(--padding-left-right);
+  padding: 5em var(--padding-left-right) 2em;
   counter-reset: project-counter;
 }
 
