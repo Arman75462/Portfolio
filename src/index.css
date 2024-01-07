@@ -688,7 +688,25 @@ SPECIFIC LAYOUT AND STYLES=
   transition: all 0.3s;
 }
 
-/* 2- CONTACT-LINKS */
+.contact__info-phone {
+  color: lime;
+}
+
+.contact__info-email {
+  background: linear-gradient(
+    90deg,
+    rgb(76, 76, 255),
+    rgb(255, 32, 32),
+    rgb(203, 203, 0),
+    green
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 2- CONTACT-SIGNATURE */
+
+/* 3- CONTACT-LINKS */
 .contact__signature {
   display: flex;
   align-items: center;
