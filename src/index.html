@@ -126,29 +126,32 @@
       <div class="container">
         <!-- 2- ABOUT ME -->
         <article class="about-me">
-          <h2
-            class="about-me__title section__title"
-            id="about-me"
-            data-lang-en="About me"
-            data-lang-fr="À propos"
-          >
-            About me
-          </h2>
-          <p
-            class="about-me__story"
-            data-lang-en="Hi! I'm Arman, a front-end developer where I make technology meet art. My formula: clean code, user-focused design, and a dash of elegance."
-            data-lang-fr="Salut ! Je suis Arman, un développeur front-end où je fais rencontrer la technologie avec l'art. Ma formule : du code propre, un design centré sur l'utilisateur, et une touche d'élégance."
-          ></p>
-          <p
-            class="about-me__story"
-            data-lang-en="I'm an architect in code, passionate about crafting both the structure and beauty of websites."
-            data-lang-fr="Je suis un architecte en programmation, passionné par la création de la structure et de la beauté des sites web."
-          ></p>
-          <p
-            class="about-me__story"
-            data-lang-en="Driven by the excitement of bringing ideas to life, I'm constantly learning and innovating. Ready to create stunning, functional digital solutions? Let's make something incredible together."
-            data-lang-fr="Animé par l'excitation de donner vie aux idées, j'apprends et innove constamment. Prêt à créer des solutions numériques étonnantes et fonctionnelles ? Faisons quelque chose d'incroyable ensemble."
-          ></p>
+          <!-- Just a flex container -->
+          <div>
+            <h2
+              class="about-me__title section__title"
+              id="about-me"
+              data-lang-en="About me"
+              data-lang-fr="À propos"
+            >
+              About me
+            </h2>
+            <p
+              class="about-me__story"
+              data-lang-en="Hi! I'm Arman, a front-end developer where I make technology meet art. My formula: clean code, user-focused design, and a dash of elegance."
+              data-lang-fr="Salut ! Je suis Arman, un développeur front-end où je fais rencontrer la technologie avec l'art. Ma formule : du code propre, un design centré sur l'utilisateur, et une touche d'élégance."
+            ></p>
+            <p
+              class="about-me__story"
+              data-lang-en="I'm an architect in code, passionate about crafting both the structure and beauty of websites."
+              data-lang-fr="Je suis un architecte en programmation, passionné par la création de la structure et de la beauté des sites web."
+            ></p>
+            <p
+              class="about-me__story"
+              data-lang-en="Driven by the excitement of bringing ideas to life, I'm constantly learning and innovating. Ready to create stunning, functional digital solutions? Let's make something incredible together."
+              data-lang-fr="Animé par l'excitation de donner vie aux idées, j'apprends et innove constamment. Prêt à créer des solutions numériques étonnantes et fonctionnelles ? Faisons quelque chose d'incroyable ensemble."
+            ></p>
+          </div>
           <div class="about-me__buttons">
             <a href="#contact">
               <button type="button" class="about-me__cta cta">Contact</button>
@@ -157,8 +160,8 @@
               <button
                 type="button"
                 class="about-me__cta cta"
-                data-lang-en="Resume ↘"
-                data-lang-fr="CV ↘"
+                data-lang-en="Resume ➚"
+                data-lang-fr="CV ➚"
               ></button>
             </a>
           </div>
@@ -258,7 +261,7 @@
         <!-- 2- PROJECT 1 -->
         <article class="project project1">
           <!-- 3- PROJECT-INFO-1 -->
-          <div class="project__info">
+          <div class="project__info project__info1">
             <h3 class="project__title">EtchASketch</h3>
             <p
               class="project__description"
@@ -274,13 +277,18 @@
           </div>
 
           <!-- 3- PROJECT-IMAGE-1 -->
-          <div class="project__image project__image1"></div>
+          <img
+            src="images/EtchASketch.webp"
+            class="project__image"
+            alt=""
+            loading="lazy"
+          />
         </article>
 
         <!-- 2- PROJECT 2 -->
         <article class="project project2">
           <!-- 3- PROJECT-INFO-2 -->
-          <div class="project__info">
+          <div class="project__info project__info2">
             <h3 class="project__title">Tic-Tac-Toe</h3>
             <p
               class="project__description"
@@ -296,13 +304,18 @@
           </div>
 
           <!-- 3- PROJECT-IMAGE-2 -->
-          <div class="project__image project__image2"></div>
+          <img
+            src="images/TicTacToe.webp"
+            class="project__image"
+            alt=""
+            loading="lazy"
+          />
         </article>
 
         <!-- 2- PROJECT 3 -->
         <article class="project project3">
           <!-- 3- PROJECT-INFO-3 -->
-          <div class="project__info">
+          <div class="project__info project__info3">
             <h3 class="project__title">ToDo-List</h3>
             <p
               class="project__description"
@@ -318,13 +331,18 @@
           </div>
 
           <!-- 3- PROJECT-IMAGE-3 -->
-          <div class="project__image project__image3"></div>
+          <img
+            src="images/ToDoList.webp"
+            class="project__image"
+            alt=""
+            loading="lazy"
+          />
         </article>
 
         <!-- 2- PROJECT 4 -->
         <article class="project project4">
           <!-- 3- PROJECT-INFO-4 -->
-          <div class="project__info">
+          <div class="project__info project__info4">
             <h3 class="project__title">Weather-website</h3>
             <p
               class="project__description"
@@ -340,7 +358,12 @@
           </div>
 
           <!-- 3- PROJECT-IMAGE-4 -->
-          <div class="project__image project__image4"></div>
+          <img
+            src="images/Weather-website.webp"
+            class="project__image"
+            alt=""
+            loading="lazy"
+          />
         </article>
 
         <!-- Add more project items as needed -->

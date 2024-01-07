@@ -33,7 +33,7 @@ window.addEventListener("mousemove", (e) => {
       left: `${posX}px`,
       top: `${posY}px`,
     },
-    { duration: 500, fill: "forwards" }
+    { duration: 300, fill: "forwards" }
   );
 });
 
@@ -41,6 +41,7 @@ window.addEventListener("mousemove", (e) => {
 navbarLinksContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav__link")) {
     if (window.innerWidth <= 800) {
+      // Only if window is smaller than 800px, do the following.
       hamburgerMenuButton.classList.toggle("active");
       hideMenu();
     }
