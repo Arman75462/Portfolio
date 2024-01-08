@@ -22,7 +22,7 @@ import {
   switchThemeButtonText,
 } from "./functions";
 
-/* Event listener to make the custom cursor work */
+// Event listener to make the custom cursor work
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
   const posY = e.clientY;
@@ -153,6 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 1500, // values from 0 to 3000, with step 50ms
     once: true, // whether animation should happen only once - while scrolling down
-    offset: 350,
+    offset: 300,
   });
 });

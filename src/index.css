@@ -690,12 +690,12 @@ SPECIFIC LAYOUT AND STYLES=
 
 .contact__links {
   display: flex;
-  gap: 0.5em;
+  gap: 0.8em;
 }
 
 .contact__links-image {
-  height: 2em;
-  width: 2em;
+  height: 2.5em;
+  width: 2.5em;
   transition: all 0.3s;
   opacity: 1;
 }
@@ -795,6 +795,21 @@ MEDIA QUERIES==============
   /* 1- ABOUT */
   .about-me__buttons {
     gap: 2.5em;
+  }
+
+  /* 1- CONTACT */
+
+  /* 2- CONTACT-SIGNATURE */
+
+  /* 3- CONTACT-LINKS */
+  .contact__links {
+    display: flex;
+    gap: 1.5em;
+  }
+
+  .contact__links-image {
+    height: 3em;
+    width: 3em;
   }
 }
 
