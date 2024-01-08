@@ -42,11 +42,21 @@ window.addEventListener("mousemove", (e) => {
 // Event listener to hide menu once user clicked on a link
 navbarLinksContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav__link")) {
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth > 800) {
       // Only if window is smaller than 800px, do the following.
       hamburgerMenuButton.classList.toggle("active");
       hideMenu();
     }
+  }
+});
+
+// This listener ensures that when the screen is resized past the hamburger menu breakpoint (800px), the hamburger menu state is reset to prevent display errors, if for some reason the user has switched from under 800px to 800px or above.
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 800) {
+    // Assuming 800px is the breakpoint for your hamburger menu
+    hamburgerMenuButton.classList.remove("active");
+    navbarLinksContainer.classList.remove("show", "hide");
+    document.body.style.overflow = "auto"; // Reset the overflow
   }
 });
 

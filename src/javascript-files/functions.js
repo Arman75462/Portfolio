@@ -4,8 +4,6 @@ import {
   skillIconGithub,
   contactLinkImageGithub,
   toggleThemeButton,
-  cursorDot,
-  cursorOutline,
 } from "./DOMselectors";
 
 // Function to show menu
