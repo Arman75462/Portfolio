@@ -146,7 +146,7 @@ body.light-mode {
   --body-background-color: linear-gradient(
     to right,
     rgb(10, 10, 10),
-    rgb(0, 0, 41)
+    rgb(0, 0, 50)
   );
   --striking-color: cyan;
 
@@ -167,32 +167,6 @@ body.light-mode {
 
   /* Padding left and right */
   --padding-left-right: 0;
-}
-
-/* Custom cursor styles */
-.cursor-dot {
-  width: 5px;
-  height: 5px;
-  background: var(--text-color);
-  z-index: 2;
-}
-
-.cursor-outline {
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--text-color);
-  opacity: 0.5;
-  z-index: 2;
-}
-
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  pointer-events: none;
 }
 
 /* Call to action styles */
@@ -446,7 +420,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 .hide {
   animation-name: closeMenu;
-  z-index: -1;
+  z-index: 2;
 }
 
 /* DARKMODE/LIGHTMODE TOGGLE */
@@ -498,8 +472,8 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 .hero__image {
-  border-radius: 40px;
   box-shadow: 5px 5px 10px 0px var(--striking-color);
+  border-radius: 15px;
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
@@ -740,6 +714,32 @@ MEDIA QUERIES==============
   ==============================*/
   .section__title {
     padding-top: 1em;
+  }
+
+  /* Custom cursor styles */
+  .cursor-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--text-color);
+    z-index: 2;
+  }
+
+  .cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--text-color);
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
   }
 
   /*============================
