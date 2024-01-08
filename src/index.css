@@ -102,6 +102,7 @@ body {
   color: var(--text-color);
   background: var(--body-background-color);
   cursor: none;
+  overflow-x: hidden;
 }
 
 /* Website styles for light-mode theme */
@@ -476,7 +477,6 @@ SPECIFIC LAYOUT AND STYLES=
 .nav__language {
   bottom: 5%;
 }
-
 /* 1- HERO SECTION */
 .hero {
   padding: 0.5em var(--padding-left-right) 4em;

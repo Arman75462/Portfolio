@@ -1,4 +1,6 @@
 import "../index.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 /* DOM SELECTORS IMPORT */
 import {
@@ -134,4 +136,12 @@ toggleThemeButton.addEventListener("click", () => {
 
   // Switch GitHub icon, depending on background-color
   switchGithubIcon();
+});
+
+// Intialize AOS animations, and make them work on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    duration: 1500, // values from 0 to 3000, with step 50ms
+    once: true, // whether animation should happen only once - while scrolling down
+  });
 });
