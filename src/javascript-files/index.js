@@ -152,11 +152,13 @@ toggleThemeButton.addEventListener("click", () => {
   switchGithubIcon();
 });
 
-// Intialize AOS animations, and make them work on scroll
+// Intialize AOS animations only if the user has no preference for animations
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    duration: 1500, // values from 0 to 3000, with step 50ms
-    once: true, // whether animation should happen only once - while scrolling down
-    offset: 350,
-  });
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    AOS.init({
+      duration: 1500, // values from 0 to 3000, with step 50ms
+      once: true, // whether animation should happen only once - while scrolling down
+      offset: 350,
+    });
+  }
 });
