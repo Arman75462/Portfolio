@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <!-- SEO META TAGS -->
     <meta
       name="description"
@@ -24,6 +25,7 @@
 
     <!-- FAVICON  -->
     <link rel="icon" href="../src/images/initials.jpg" type="image/x-icon" />
+
     <!-- TAB TITLE -->
     <title>Arman Gulistani | Front End Developer</title>
   </head>
@@ -42,14 +44,14 @@
         <nav class="header__nav">
           <!-- INITIALS -->
           <p class="header__initials">AG</p>
+
           <!-- 3- HABURGER MENU -->
           <div class="hamburger-wrapper">
             <div class="hamburger-icon">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span> <span></span> <span></span>
             </div>
           </div>
+
           <!-- 3- NAV-LINKS -->
           <ul class="nav__list">
             <li class="nav__item">
@@ -95,6 +97,7 @@
 
             <!-- DARKMODE/LIGHTMODE TOGGLE -->
             <button type="button" class="theme-toggle">🌛</button>
+
             <!-- LANGUAGE CHANGE -->
             <button type="button" class="nav__language" id="languageSwitch">
               EN
@@ -106,20 +109,34 @@
 
     <!-- 1- HERO SECTION -->
     <section class="hero">
-      <div class="container">
-        <h1
-          class="hero__title"
-          data-lang-en="Arman Gulistani, Front-End Web Developper"
-          data-lang-fr="Arman Gulistani,  développeur front-end."
-        ></h1>
-        <a href="#contact">
-          <button
-            type="button"
-            class="hero__cta cta"
-            data-lang-en="Contact"
-            data-lang-fr="Contact"
-          ></button>
-        </a>
+      <div
+        class="hero__container container"
+        data-aos="zoom-in-up"
+        data-aos-duration="2500"
+      >
+        <!-- Just a flex container -->
+        <div>
+          <h1 class="hero__title">
+            <div
+              class="hero__name"
+              data-lang-en="Arman Gulistani"
+              data-lang-fr="Arman Gulistani"
+            ></div>
+            <div
+              class="hero__profession"
+              data-lang-en="Front End Developer"
+              data-lang-fr="Développeur Front End"
+            ></div>
+          </h1>
+          <a href="#contact"
+            ><button
+              type="button"
+              class="hero__cta cta"
+              data-lang-en="Contact"
+              data-lang-fr="Contact"
+            ></button
+          ></a>
+        </div>
 
         <!-- 2- IMAGE OF YOURSELF -->
         <img
@@ -134,38 +151,46 @@
     <main class="about">
       <div class="container">
         <!-- 2- ABOUT ME -->
-        <article class="about-me">
-          <h2
-            class="about-me__title"
-            id="about-me"
-            data-lang-en="About me"
-            data-lang-fr="À propos de moi"
-          >
-            About me
-          </h2>
-          <p
-            class="about-me__story"
-            data-lang-en="Hi! I'm Arman, a front-end developer where i make technology meets
-          art. My formula: clean code, user-focused design, and a dash of
-          elegance. I'm an architect in code, passionate about crafting both
-          the structure and beauty of websites. Driven by the excitement of
-          bringing ideas to life, I'm constantly learning and innovating.
-          Ready to create stunning, functional digital solutions? Let's make
-          something incredible together."
-            data-lang-fr="Salut ! Je suis Arman, un développeur front-end où je fais rencontrer la technologie avec l'art. Ma formule : du code propre, un design centré sur l'utilisateur, et une touche d'élégance. Je suis un architecte en programmation, passionné par la création de la structure et de la beauté des sites web. Animé par l'excitation de donner vie aux idées, j'apprends et innove constamment. Prêt à créer des solutions numériques étonnantes et fonctionnelles ? Faisons quelque chose d'incroyable ensemble."
-          ></p>
+        <article class="about-me" data-aos="flip-left">
+          <!-- Just a flex container -->
+          <div>
+            <h2
+              class="about-me__title section__title"
+              id="about-me"
+              data-lang-en="About me"
+              data-lang-fr="À propos"
+            ></h2>
+            <p
+              class="about-me__story"
+              data-lang-en="Hi! I'm Arman, a front-end developer where I make technology meet art. My formula: clean code, user-focused design, and a dash of elegance."
+              data-lang-fr="Salut ! Je suis Arman, un développeur front-end où je fais rencontrer la technologie avec l'art. Ma formule : du code propre, un design centré sur l'utilisateur, et une touche d'élégance."
+            ></p>
+            <p
+              class="about-me__story"
+              data-lang-en="I'm an architect in code, passionate about crafting both the structure and beauty of websites."
+              data-lang-fr="Je suis un architecte en programmation, passionné par la création de la structure et de la beauté des sites web."
+            ></p>
+            <p
+              class="about-me__story"
+              data-lang-en="Driven by the excitement of bringing ideas to life, I'm constantly learning and innovating. Ready to create stunning, functional digital solutions? Let's make something incredible together."
+              data-lang-fr="Animé par l'excitation de donner vie aux idées, j'apprends et innove constamment. Prêt à créer des solutions numériques étonnantes et fonctionnelles ? Faisons quelque chose d'incroyable ensemble."
+            ></p>
+          </div>
+
+          <!-- 3- ABOUT-ME BUTTONS -->
           <div class="about-me__buttons">
-            <a href="#contact">
-              <button type="button" class="about-me__cta cta">Contact</button>
-            </a>
-            <a class="about-me__link" target="_blank">
-              <button
+            <a href="#contact"
+              ><button type="button" class="about-me__cta cta">
+                Contact
+              </button> </a
+            ><a class="about-me__link" target="_blank"
+              ><button
                 type="button"
                 class="about-me__cta cta"
                 data-lang-en="Resume ➚"
                 data-lang-fr="CV ➚"
-              ></button>
-            </a>
+              ></button
+            ></a>
           </div>
         </article>
       </div>
@@ -250,7 +275,7 @@
       </div>
     </section>
 
-    <!-- 1- PROJECTS -->
+    <!-- 2- PROJECT 1 -->
     <section class="projects">
       <div class="projects__container container">
         <h2
@@ -259,10 +284,7 @@
           data-lang-en="My projects"
           data-lang-fr="Mes projets"
         ></h2>
-
-        <!-- 2- PROJECT 1 -->
         <article class="project project1" data-aos="flip-left">
-          <!-- 3- PROJECT-INFO-1 -->
           <div class="project__info project__info1">
             <h3 class="project__title">EtchASketch</h3>
             <p
@@ -282,7 +304,7 @@
           <img
             src="../src/images/EtchASketch-fixed.webp"
             class="project__image"
-            alt=""
+            alt
             loading="lazy"
           />
         </article>
@@ -309,7 +331,7 @@
           <img
             src="../src/images/TicTacToe.webp"
             class="project__image"
-            alt=""
+            alt
             loading="lazy"
           />
         </article>
@@ -336,7 +358,7 @@
           <img
             src="../src/images/ToDoList.webp"
             class="project__image"
-            alt=""
+            alt
             loading="lazy"
           />
         </article>
@@ -363,7 +385,7 @@
           <img
             src="../src/images/Weather-website.webp"
             class="project__image"
-            alt=""
+            alt
             loading="lazy"
           />
         </article>
@@ -374,8 +396,13 @@
 
     <!-- 1- CONTACT -->
     <footer class="contact">
-      <div class="container">
-        <h2 class="contact__title" id="contact">AG</h2>
+      <div class="contact__container container" data-aos="zoom-in">
+        <h2 class="contact__title section__title" id="contact">Contact</h2>
+        <h3
+          class="contact__summary-title"
+          data-lang-en="Drop me a message"
+          data-lang-fr="Laisse moi un message"
+        ></h3>
         <p
           class="contact__summary"
           data-lang-en="This is the end! I hope you've gained a good insight into my skills and experiences. If you have opportunities or questions, I’m just a message away. Let's explore how we can contribute to mutual success!"
