@@ -21,7 +21,7 @@ import {
   switchGithubIcon,
   switchThemeButtonText,
   updateScrollWatcher,
-} from "./functions";
+} from "./DOMfunctions";
 
 // Event listener for scroll event
 window.addEventListener("scroll", updateScrollWatcher);
