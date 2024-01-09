@@ -20,7 +20,11 @@ import {
   showMenu,
   switchGithubIcon,
   switchThemeButtonText,
+  updateScrollWatcher,
 } from "./functions";
+
+// Event listener for scroll event
+window.addEventListener("scroll", updateScrollWatcher);
 
 // Event listener to make the custom cursor work
 window.addEventListener("mousemove", (e) => {
@@ -42,7 +46,7 @@ window.addEventListener("mousemove", (e) => {
 // Event listener to hide menu once user clicked on a link
 navbarLinksContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav__link")) {
-    if (window.innerWidth > 800) {
+    if (window.innerWidth < 800) {
       // Only if window is smaller than 800px, do the following.
       hamburgerMenuButton.classList.toggle("active");
       hideMenu();
@@ -153,6 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 1500, // values from 0 to 3000, with step 50ms
     once: true, // whether animation should happen only once - while scrolling down
-    offset: 300,
+    offset: 350,
   });
 });

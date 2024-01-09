@@ -25,8 +25,10 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@vue/preload-webpack-plugin": "^2.0.0",
     "aos": "^2.3.4",
     "css-minimizer-webpack-plugin": "^5.0.1",
+    "html-critical-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.7.6",
     "terser-webpack-plugin": "^5.3.9",

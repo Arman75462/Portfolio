@@ -1,9 +1,11 @@
+/* DOM SELECTORS IMPORT */
 import {
   navbarLinksContainer,
   bodyElement,
   skillIconGithub,
   contactLinkImageGithub,
   toggleThemeButton,
+  scrollWatcher,
 } from "./DOMselectors";
 
 // Function to show menu
@@ -38,4 +40,17 @@ export function switchThemeButtonText() {
   } else {
     toggleThemeButton.textContent = "🌛";
   }
+}
+
+// Function to update the width of the scroll-watcher
+export function updateScrollWatcher() {
+  // Calculate the scroll percentage
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+  // Update the width of the scroll-watcher
+  scrollWatcher.style.width = `${scrollPercent}%`;
 }

@@ -23,7 +23,7 @@
     <meta property="og:type" content="website" />
 
     <!-- FAVICON  -->
-    <link rel="icon" href="images/initials.webp" type="image/x-icon" />
+    <link rel="icon" href="../src/images/initials.jpg" type="image/x-icon" />
     <!-- TAB TITLE -->
     <title>Arman Gulistani | Front End Developer</title>
   </head>
@@ -106,9 +106,13 @@
 
     <!-- 1- HERO SECTION -->
     <section class="hero">
-      <div class="hero__container container">
+      <div
+        class="hero__container container"
+        data-aos="zoom-in-up"
+        data-aos-duration="2500"
+      >
         <!-- Just a flex container -->
-        <div data-aos="zoom-in">
+        <div>
           <h1 class="hero__title">
             <div
               class="hero__name"
@@ -136,8 +140,6 @@
           src="../src/images/Arman.webp"
           alt="Arman Gulistani"
           class="hero__image"
-          data-aos="zoom-in"
-          data-aos-duration="2000"
         />
       </div>
     </section>
@@ -146,7 +148,7 @@
     <main class="about">
       <div class="container">
         <!-- 2- ABOUT ME -->
-        <article class="about-me" data-aos="flip-left" data-aos-duration="1500">
+        <article class="about-me" data-aos="flip-left">
           <!-- Just a flex container -->
           <div>
             <h2

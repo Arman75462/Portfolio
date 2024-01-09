@@ -15,8 +15,7 @@ RESETS=====================
   padding: 0;
 }
 
-/* Enable smooth scrolling for same-page links, 
-   effective only for users without preference for reduced motion */
+/* Enable smooth scrolling for same-page links, effective only for users without preference for reduced motion */
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
@@ -222,18 +221,7 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 10;
-  scale: 0 1;
-  transform-origin: left;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
-}
-
-@keyframes scroll-watcher {
-  to {
-    scale: 1 1;
-  }
+  width: 0; /* Initial width set to 0 */
 }
 
 /* Add border-top for each section title for aesthetics and a better UX */
@@ -279,7 +267,7 @@ SPECIFIC LAYOUT AND STYLES=
   display: flex;
   align-items: center;
   transform: rotate(0);
-  transition: all 1s;
+  transition: all 0.5s;
   z-index: 2;
 }
 
@@ -298,7 +286,7 @@ SPECIFIC LAYOUT AND STYLES=
     0 0 5px var(--striking-color),
     0 0 10px var(--striking-color);
   transition: all 0.3s;
-  transition-delay: 1s;
+  transition-delay: 0.5s;
 }
 
 .hamburger-icon span:nth-child(1) {
@@ -661,18 +649,10 @@ SPECIFIC LAYOUT AND STYLES=
   transition: all 0.3s;
 }
 
-.contact__info-phone {
-  color: lime;
-}
-
+.contact__info-phone,
 .contact__info-email {
-  background: linear-gradient(
-    90deg,
-    rgb(76, 76, 255),
-    rgb(255, 32, 32),
-    rgb(203, 203, 0),
-    green
-  );
+  font-weight: bold;
+  background: var(--button-background-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -12,5 +12,8 @@ export const contactLinkImageGithub = document.querySelector(
   ".contact__links-image--github"
 );
 
+// Select the scroll-watcher element
+export const scrollWatcher = document.querySelector(".scroll-watcher");
+
 // Select all elements with a 'data-lang-en' attribute
 export const translatableElements = document.querySelectorAll("[data-lang-en]");
