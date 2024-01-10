@@ -237,7 +237,7 @@ h2 {
 
 /* Add border-top for each section title for aesthetics and a better UX */
 .section__title {
-  border-top: 0.5px solid var(--text-color);
+  border-top: 1px solid var(--text-color);
   padding-top: 0.5em;
 }
 
@@ -406,6 +406,7 @@ SPECIFIC LAYOUT AND STYLES=
   height: 100vh;
   inset: 0;
   justify-content: space-evenly;
+  align-content: center;
   padding-left: 20%;
   position: fixed;
   width: 100vw;
@@ -621,7 +622,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* 1- CONTACT */
 .contact {
-  padding: 2em var(--padding-left-right);
+  padding: 2em var(--padding-left-right) 1em;
 }
 
 .contact__title {
@@ -672,7 +673,7 @@ SPECIFIC LAYOUT AND STYLES=
   border-top: 1px solid var(--text-color);
   display: flex;
   justify-content: space-between;
-  padding-top: 0.5em;
+  padding-top: 1em;
 }
 
 .contact__links {
