@@ -14,7 +14,7 @@ Welcome to my personal portfolio website. As a Front End Developer, I've designe
 - **ESLint**: Ensuring JavaScript code quality.
 - **Prettier**: Ensuring HTML & CSS code quality.
 
-## FSections
+## Sections
 
 - About Me: Introducing myself.
 - Skills: Overview of my technical skills and tools I use.
