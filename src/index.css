@@ -19,7 +19,7 @@ RESETS=====================
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem; /* Offset for fixed headers or navbars */
+    scroll-padding-top: 1rem; /* Offset for fixed headers or navbars */
   }
 }
 
@@ -209,36 +209,15 @@ h2 {
   width: 0; /* Initial width set to 0 */
 }
 
-/* Custom cursor styles */
-.cursor-dot {
-  background: var(--text-color);
-  height: 5px;
-  width: 5px;
-  z-index: 2;
-}
-
-.cursor-outline {
-  border: 2px solid var(--text-color);
-  height: 30px;
-  opacity: 0.5;
-  width: 30px;
-  z-index: 2;
-}
-
-.cursor-dot,
-.cursor-outline {
-  border-radius: 50%;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  transform: translate(-50%, -50%);
-}
-
 /* Add border-top for each section title for aesthetics and a better UX */
 .section__title {
   border-top: 1px solid var(--text-color);
   padding-top: 0.5em;
+}
+
+/* Add blur to an element */
+.blur {
+  filter: blur(15px);
 }
 
 /*============================
@@ -341,6 +320,59 @@ SPECIFIC LAYOUT AND STYLES=
   width: 100%;
 }
 
+/* 3- NAV-LIST */
+.nav__list {
+  display: none;
+  position: relative;
+}
+
+.hide,
+.show {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  background: var(--body-background-color);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  inset: 0;
+  justify-content: space-evenly;
+  padding-left: 20%;
+  position: fixed;
+  width: 100vw;
+}
+
+.show {
+  animation-name: openMenu;
+  z-index: 1;
+}
+
+.hide {
+  animation-name: closeMenu;
+  z-index: 2;
+}
+
+@keyframes openMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeMenu {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+}
+
 .nav__link {
   position: relative;
   text-transform: uppercase;
@@ -368,64 +400,10 @@ SPECIFIC LAYOUT AND STYLES=
   transform: scaleY(1);
 }
 
-@keyframes openMenu {
-  0% {
-    opacity: 0;
-    transform: translate(-400px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes closeMenu {
-  0% {
-    opacity: 1;
-    transform: translate(0);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-400px);
-  }
-}
-
-.nav__list {
-  display: none;
-  position: relative;
-}
-
-.hide,
-.show {
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  background: var(--body-background-color);
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
-  height: 100vh;
-  inset: 0;
-  justify-content: space-evenly;
-  align-content: center;
-  padding-left: 20%;
-  position: fixed;
-  width: 100vw;
-}
-
-.show {
-  animation-name: openMenu;
-  z-index: 1;
-}
-
-.hide {
-  animation-name: closeMenu;
-  z-index: 2;
-}
-
 /* DARKMODE/LIGHTMODE TOGGLE */
 .theme-toggle {
   background: #789;
-  bottom: 15%;
+  bottom: 22%;
 }
 
 .nav__language,
@@ -445,7 +423,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* LANGUAGE CHANGE */
 .nav__language {
-  bottom: 5%;
+  bottom: 8%;
 }
 
 /* 1- HERO SECTION */
@@ -701,6 +679,32 @@ MEDIA QUERIES==============
   ==============================*/
   .section__title {
     padding-top: 1em;
+  }
+
+  /* Custom cursor styles */
+  .cursor-dot {
+    background: var(--text-color);
+    height: 5px;
+    width: 5px;
+    z-index: 2;
+  }
+
+  .cursor-outline {
+    border: 2px solid var(--text-color);
+    height: 30px;
+    opacity: 0.5;
+    width: 30px;
+    z-index: 2;
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    border-radius: 50%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transform: translate(-50%, -50%);
   }
 
   /*============================

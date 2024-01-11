@@ -6,6 +6,11 @@ import {
   contactLinkImageGithub,
   toggleThemeButton,
   scrollWatcher,
+  heroSection,
+  aboutSection,
+  skillsSection,
+  projectsSection,
+  contactSection,
 } from "./DOMselectors";
 
 // Function to show menu
@@ -53,4 +58,22 @@ export function updateScrollWatcher() {
 
   // Update the width of the scroll-watcher
   scrollWatcher.style.width = `${scrollPercent}%`;
+}
+
+// Function to add blur in the main sections of the website, apart from the header section
+export function addSectionsBlur() {
+  heroSection.classList.add("blur");
+  aboutSection.classList.add("blur");
+  skillsSection.classList.add("blur");
+  projectsSection.classList.add("blur");
+  contactSection.classList.add("blur");
+}
+
+// Function to remove blur from the main sections of the website, apart from the header section
+export function removeSectionsBlur() {
+  heroSection.classList.remove("blur");
+  aboutSection.classList.remove("blur");
+  skillsSection.classList.remove("blur");
+  projectsSection.classList.remove("blur");
+  contactSection.classList.remove("blur");
 }

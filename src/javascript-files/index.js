@@ -21,6 +21,8 @@ import {
   switchGithubIcon,
   switchThemeButtonText,
   updateScrollWatcher,
+  removeSectionsBlur,
+  addSectionsBlur,
 } from "./DOMfunctions";
 
 // Event listener for scroll event
@@ -50,6 +52,7 @@ navbarLinksContainer.addEventListener("click", (e) => {
       // Only if window is smaller than 800px, do the following.
       hamburgerMenuButton.classList.toggle("active");
       hideMenu();
+      removeSectionsBlur();
     }
   }
 });
@@ -61,6 +64,9 @@ window.addEventListener("resize", () => {
     hamburgerMenuButton.classList.remove("active");
     navbarLinksContainer.classList.remove("show", "hide");
     document.body.style.overflow = "auto"; // Reset the overflow
+
+    // Remove the blur fo all otehr sections except header, if for some reason the user has switched from under 800px to 800px or above.
+    removeSectionsBlur();
   }
 });
 
@@ -70,8 +76,10 @@ hamburgerMenuButton.addEventListener("click", () => {
 
   if (navbarLinksContainer.classList.contains("show")) {
     hideMenu();
+    removeSectionsBlur();
   } else {
     showMenu();
+    addSectionsBlur();
   }
 });
 
