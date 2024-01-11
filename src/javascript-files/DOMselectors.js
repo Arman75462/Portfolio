@@ -23,12 +23,6 @@ export const aboutSection = document.querySelector(".about");
 // Skills section of website
 export const skillsSection = document.querySelector(".skills");
 
-// Projects section of website
-export const projectsSection = document.querySelector(".projects");
-
-// Contact section of website
-export const contactSection = document.querySelector(".contact");
-
 // Select the scroll-watcher element
 export const scrollWatcher = document.querySelector(".scroll-watcher");
 
