@@ -1,6 +1,6 @@
 /* DOM SELECTORS IMPORT */
 import {
-  navbarLinksContainer,
+  navList,
   bodyElement,
   skillIconGithub,
   contactLinkImageGithub,
@@ -15,15 +15,15 @@ import {
 
 // Function to show menu
 export function showMenu() {
-  navbarLinksContainer.classList.remove("hide");
-  navbarLinksContainer.classList.add("show");
+  navList.classList.remove("hide");
+  navList.classList.add("show");
   bodyElement.style.overflow = "hidden"; // Set overflow to 'hidden'
 }
 
 // Function to hide menu
 export function hideMenu() {
-  navbarLinksContainer.classList.remove("show");
-  navbarLinksContainer.classList.add("hide");
+  navList.classList.remove("show");
+  navList.classList.add("hide");
   bodyElement.style.overflow = "auto"; // Set overflow back to 'auto'
 }
 

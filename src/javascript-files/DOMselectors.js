@@ -1,6 +1,6 @@
 /* DOM SELECTORS */
 export const hamburgerMenuButton = document.querySelector(".hamburger-wrapper");
-export const navbarLinksContainer = document.querySelector(".nav__list");
+export const navList = document.querySelector(".nav__list");
 export const cursorDot = document.querySelector(".cursor-dot");
 export const cursorOutline = document.querySelector(".cursor-outline");
 export const languageSwitch = document.querySelector(".nav__language");

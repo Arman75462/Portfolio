@@ -4,7 +4,7 @@ import AOS from "aos";
 /* DOM SELECTORS IMPORT */
 import {
   hamburgerMenuButton,
-  navbarLinksContainer,
+  navList,
   cursorDot,
   cursorOutline,
   languageSwitch,
@@ -45,7 +45,7 @@ window.addEventListener("mousemove", (e) => {
 });
 
 // Event listener to hide menu once user clicked on a link
-navbarLinksContainer.addEventListener("click", (e) => {
+navList.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav__link")) {
     if (window.innerWidth < 800) {
       // Only if window is smaller than 800px, do the following.
@@ -61,10 +61,10 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 800) {
     // Assuming 800px is the breakpoint for your hamburger menu
     hamburgerMenuButton.classList.remove("active");
-    navbarLinksContainer.classList.remove("show", "hide");
+    navList.classList.remove("show", "hide");
     document.body.style.overflow = "auto"; // Reset the overflow
 
-    // Remove the blur fo all otehr sections except header, if for some reason the user has switched from under 800px to 800px or above.
+    // Remove the blur for all other sections except header, if for some reason the user has switched from under 800px to 800px or above.
     removeSectionsBlur();
   }
 });
@@ -73,7 +73,7 @@ window.addEventListener("resize", () => {
 hamburgerMenuButton.addEventListener("click", () => {
   hamburgerMenuButton.classList.toggle("active");
 
-  if (navbarLinksContainer.classList.contains("show")) {
+  if (navList.classList.contains("show")) {
     hideMenu();
     removeSectionsBlur();
   } else {
