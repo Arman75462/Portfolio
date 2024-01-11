@@ -158,8 +158,11 @@ body.light-mode {
 .cta {
   background: var(--button-background-color);
   border-radius: 1em;
-  box-shadow: 0 0 2px var(--striking-color), 0 0 4px var(--striking-color),
-    0 0 8px var(--striking-color), 0 0 16px var(--striking-color);
+  box-shadow:
+    0 0 2px var(--striking-color),
+    0 0 4px var(--striking-color),
+    0 0 8px var(--striking-color),
+    0 0 16px var(--striking-color);
   color: var(--button-text-color);
   font-size: 1.1rem;
   font-weight: 500;
@@ -168,8 +171,11 @@ body.light-mode {
 }
 
 .cta:hover {
-  box-shadow: 0 0 5px var(--striking-color), 0 0 10px var(--striking-color),
-    0 0 20px var(--striking-color), 0 0 40px var(--striking-color);
+  box-shadow:
+    0 0 5px var(--striking-color),
+    0 0 10px var(--striking-color),
+    0 0 20px var(--striking-color),
+    0 0 40px var(--striking-color);
   transform: translateY(-5px);
 }
 
@@ -209,11 +215,6 @@ h2 {
   padding-top: 0.5em;
 }
 
-/* Add blur to an element */
-.blur {
-  filter: blur(15px);
-}
-
 /*============================
 SPECIFIC LAYOUT AND STYLES=
 ==============================*/
@@ -230,7 +231,9 @@ SPECIFIC LAYOUT AND STYLES=
 }
 
 .header__initials {
-  font-family: Petit Formal Script, cursive;
+  font-family:
+    Petit Formal Script,
+    cursive;
   font-size: 2.5rem;
   font-weight: 700;
 }
@@ -239,7 +242,10 @@ SPECIFIC LAYOUT AND STYLES=
 .hamburger-wrapper {
   border-radius: var(--hamburger-wrapper-border-radius);
   cursor: pointer;
+
+  /* To center the hamburger-icon */
   display: flex;
+  z-index: 2;
   height: var(--hamburger-wrapper-height);
   width: var(--hamburger-wrapper-width);
 }
@@ -252,7 +258,6 @@ SPECIFIC LAYOUT AND STYLES=
   transform: rotate(0);
   transition: all 0.5s;
   width: var(--icon-width);
-  z-index: 2;
 }
 
 .hamburger-wrapper.active .hamburger-icon {
@@ -263,7 +268,9 @@ SPECIFIC LAYOUT AND STYLES=
   background: var(--striking-color);
   border: 2px solid var(--striking-color);
   border-radius: var(--hamburger-icon-span-border-radius);
-  box-shadow: 0 0 5px var(--striking-color), 0 0 10px var(--striking-color);
+  box-shadow:
+    0 0 5px var(--striking-color),
+    0 0 10px var(--striking-color);
   display: block;
   height: var(--hamburger-icon-span-height);
   position: absolute;
@@ -316,6 +323,14 @@ SPECIFIC LAYOUT AND STYLES=
   position: relative;
 }
 
+.nav__item {
+  font-size: 1.2rem;
+}
+
+.nav__item1 {
+  margin-top: 3em;
+}
+
 .hide,
 .show {
   animation-duration: 0.5s;
@@ -323,9 +338,9 @@ SPECIFIC LAYOUT AND STYLES=
   background: var(--body-background-color);
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
   inset: 0;
-  justify-content: space-evenly;
+  gap: 4em;
   padding-left: 20%;
   position: fixed;
   width: 100vw;
@@ -393,16 +408,15 @@ SPECIFIC LAYOUT AND STYLES=
 /* DARKMODE/LIGHTMODE TOGGLE */
 .theme-toggle {
   background: #789;
-  bottom: 22%;
+  margin-top: 7em;
 }
 
 .nav__language,
 .theme-toggle {
   border-radius: 10px;
-  font-size: 0.9rem;
   padding: 0.5em;
   position: absolute;
-  right: 10%;
+  right: 8%;
   transition: all 0.2s;
 }
 
@@ -413,7 +427,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 /* LANGUAGE CHANGE */
 .nav__language {
-  bottom: 8%;
+  margin-top: 12em;
 }
 
 /* 1- HERO SECTION */
@@ -663,14 +677,7 @@ SPECIFIC LAYOUT AND STYLES=
 /*============================
 MEDIA QUERIES==============
 ==============================*/
-@media (min-width: 800px) {
-  /*============================
-  GENERAL LAYOUT AND STYLES==
-  ==============================*/
-  .section__title {
-    padding-top: 1em;
-  }
-
+@media (min-width: 700px) {
   /* Custom cursor styles */
   .cursor-dot {
     background: var(--text-color);
@@ -696,6 +703,15 @@ MEDIA QUERIES==============
     top: 0;
     transform: translate(-50%, -50%);
   }
+}
+
+@media (min-width: 800px) {
+  /*============================
+  GENERAL LAYOUT AND STYLES==
+  ==============================*/
+  .section__title {
+    padding-top: 1em;
+  }
 
   /*============================
   SPECIFIC LAYOUT AND STYLES=
@@ -708,17 +724,28 @@ MEDIA QUERIES==============
   .nav__list {
     align-items: center;
     display: flex;
-    font-size: 0.9rem;
     gap: 1.5em;
+    font-size: 0.9rem;
   }
 
+  .nav__item {
+    font-size: 0.9rem;
+  }
+
+  .nav__item1 {
+    margin-top: 0;
+  }
+
+  /* 3- HAMBURGER MENU */
+  .hamburger-wrapper {
+    display: none;
+  }
+
+  /* DARKMODE/LIGHTMODE TOGGLE */
   .nav__language,
   .theme-toggle {
     position: static;
-  }
-
-  .hamburger-wrapper {
-    display: none;
+    margin-top: 0;
   }
 
   /* 1- HERO */

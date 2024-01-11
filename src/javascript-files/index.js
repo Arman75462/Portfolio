@@ -20,8 +20,6 @@ import {
   switchGithubIcon,
   switchThemeButtonText,
   updateScrollWatcher,
-  removeSectionsBlur,
-  addSectionsBlur,
 } from "./DOMfunctions";
 
 // Event listener for scroll event
@@ -51,7 +49,6 @@ navList.addEventListener("click", (e) => {
       // Only if window is smaller than 800px, do the following.
       hamburgerMenuButton.classList.toggle("active");
       hideMenu();
-      removeSectionsBlur();
     }
   }
 });
@@ -62,9 +59,7 @@ window.addEventListener("resize", () => {
     // Assuming 800px is the breakpoint for your hamburger menu
     hamburgerMenuButton.classList.remove("active");
     navList.classList.remove("show", "hide");
-
-    // Remove the blur for all other sections except header, if for some reason the user has switched from under 800px to 800px or above.
-    removeSectionsBlur();
+    document.body.style.overflow = "auto"; // Reset the overflow
   }
 });
 
@@ -74,10 +69,8 @@ hamburgerMenuButton.addEventListener("click", () => {
 
   if (navList.classList.contains("show")) {
     hideMenu();
-    removeSectionsBlur();
   } else {
     showMenu();
-    addSectionsBlur();
   }
 });
 

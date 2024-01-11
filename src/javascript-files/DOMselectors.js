@@ -14,15 +14,6 @@ export const contactLinkImageGithub = document.querySelector(
 // Body element of the website
 export const bodyElement = document.querySelector("body");
 
-// Hero section of website
-export const heroSection = document.querySelector(".hero");
-
-// About section of website
-export const aboutSection = document.querySelector(".about");
-
-// Skills section of website
-export const skillsSection = document.querySelector(".skills");
-
 // Select the scroll-watcher element
 export const scrollWatcher = document.querySelector(".scroll-watcher");
 
