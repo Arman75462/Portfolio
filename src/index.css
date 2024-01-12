@@ -353,7 +353,6 @@ SPECIFIC LAYOUT AND STYLES=
 
 .hide {
   animation-name: closeMenu;
-  z-index: 1;
 }
 
 @keyframes openMenu {
