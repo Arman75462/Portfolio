@@ -113,11 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentLanguage === "en") {
       // English-CV
       resumeLink.href =
-        "https://1drv.ms/b/s!Am8jzLlkCjx0p0KgLM2FZ5odEjjb?e=7Xgi1y";
+        "https://1drv.ms/b/s!Am8jzLlkCjx0p0f3PlE-nz2T_rNi?e=8pGXuU";
     } else {
       // French-CV
       resumeLink.href =
-        "https://1drv.ms/b/s!Am8jzLlkCjx0p0HJzkoxIyKpgm0y?e=cQQYvY";
+        "https://1drv.ms/b/s!Am8jzLlkCjx0p0jFsBLo0_s3kWbO?e=CKFsPI";
     }
   }
 
