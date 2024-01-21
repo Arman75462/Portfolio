@@ -725,6 +725,15 @@ MEDIA QUERIES==============
     padding-top: 1em;
   }
 
+  p {
+    font-size: 16px;
+  }
+
+  /* Font-size for all sections font-size */
+  h2 {
+    font-size: 2.5rem;
+  }
+
   /*============================
   SPECIFIC LAYOUT AND STYLES=
   ==============================*/
@@ -792,9 +801,11 @@ MEDIA QUERIES==============
   }
 
   /* 1- CONTACT */
+  .contact__summary-title {
+    font-size: 1.2rem;
+  }
 
   /* 2- CONTACT-SIGNATURE */
-
   /* 3- CONTACT-LINKS */
   .contact__links {
     display: flex;
@@ -820,6 +831,11 @@ MEDIA QUERIES==============
   /*============================
   SPECIFIC LAYOUT AND STYLES=
   ==============================*/
+  /* 1- HERO */
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
   /* 1- PROJECTS */
   .projects__title {
     margin-bottom: 3.5em;
