@@ -112,12 +112,18 @@ body.light-mode {
   --button-background-color: var(--light-mode-button-color);
   --body-background-color: var(--light-mode-body-background-color);
   --striking-color: var(--light-mode-striking-color);
+  --selection-color: var(--light-mode-selection-color);
 }
 
 /* Container for all main sections */
 .container {
   margin: 0 auto;
   width: 85%;
+}
+
+::selection {
+  background-color: var(--selection-color);
+  color: var(--light-mode-text-color);
 }
 
 :root {
@@ -146,6 +152,7 @@ body.light-mode {
   --button-background-color: linear-gradient(90deg, #deffff, #9bffff);
   --body-background-color: linear-gradient(90deg, #0a0a0a, #000032);
   --striking-color: cyan;
+  --selection-color: #33ffcc;
 
   /* Light-mode colors */
   --light-mode-text-color: #0a0a0a;
@@ -153,6 +160,7 @@ body.light-mode {
   --light-mode-button-color: linear-gradient(90deg, #3b3bff, #005);
   --light-mode-body-background-color: linear-gradient(90deg, #f6ffff, #bdffff);
   --light-mode-striking-color: #0000ab;
+  --light-mode-selection-color: #89cfff;
 
   /* Padding left and right */
   --padding-left-right: 0;
