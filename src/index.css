@@ -211,6 +211,7 @@ h2 {
   position: fixed;
   top: 0;
   width: 0; /* Initial width set to 0 */
+  z-index: 3;
 }
 
 /* Add border-top for each section title for aesthetics and a better UX */
@@ -500,7 +501,7 @@ SPECIFIC LAYOUT AND STYLES=
   display: grid;
   gap: 1.5em;
   grid-auto-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
 }
 
 .skill {
