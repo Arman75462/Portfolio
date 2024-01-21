@@ -526,7 +526,7 @@ SPECIFIC LAYOUT AND STYLES=
 
 .skill__icon {
   height: 4em;
-  margin: 0 auto;
+  margin: 0.5em auto 0;
   opacity: 0.6;
   width: 4em;
 }

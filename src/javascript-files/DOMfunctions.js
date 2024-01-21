@@ -25,11 +25,11 @@ export function hideMenu() {
 // Switch GitHub icon, depending on background-color. If background-color is light, github icon will be black. If background-color is dark github icon will be white.
 export function switchGithubIcon() {
   if (document.body.classList.contains("light-mode")) {
-    skillIconGithub.src = "../src/images/GitHub-black.webp";
-    contactLinkImageGithub.src = "../src/images/GitHub-black.webp";
+    skillIconGithub.src = "images/GitHub-black.webp";
+    contactLinkImageGithub.src = "images/GitHub-black.webp";
   } else {
-    skillIconGithub.src = "../src/images/GitHub-white.webp";
-    contactLinkImageGithub.src = "../src/images/GitHub-white.webp";
+    skillIconGithub.src = "images/GitHub-white.webp";
+    contactLinkImageGithub.src = "images/GitHub-white.webp";
   }
 }
 
