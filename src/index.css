@@ -94,10 +94,6 @@ select {
 /*============================
 GENERAL LAYOUT AND STYLES==
 ==============================*/
-html {
-  background-color: var(--body-background-color);
-}
-
 body {
   background: var(--body-background-color);
   color: var(--text-color);
