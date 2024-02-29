@@ -1,5 +1,4 @@
 import "../index.css";
-import AOS from "aos";
 
 /* DOM SELECTORS IMPORT */
 import {
@@ -152,15 +151,4 @@ toggleThemeButton.addEventListener("click", () => {
 
   // Switch GitHub icon, depending on background-color
   switchGithubIcon();
-});
-
-// Intialize AOS animations only if the user has no preference for animations
-document.addEventListener("DOMContentLoaded", () => {
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    AOS.init({
-      duration: 1500, // General animation duration
-      once: true, // Animation happens only once
-      offset: window.innerWidth < 800 ? 100 : 320, // Smaller offset for mobile
-    });
-  }
 });
