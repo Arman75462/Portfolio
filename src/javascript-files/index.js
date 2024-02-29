@@ -158,9 +158,9 @@ toggleThemeButton.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     AOS.init({
-      duration: 1500, // values from 0 to 3000, with step 50ms
-      once: true, // whether animation should happen only once - while scrolling down
-      offset: 320,
+      duration: 1500, // General animation duration
+      once: true, // Animation happens only once
+      offset: window.innerWidth < 800 ? 100 : 320, // Smaller offset for mobile
     });
   }
 });
