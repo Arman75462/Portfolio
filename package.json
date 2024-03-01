@@ -30,6 +30,7 @@
     "html-critical-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.7.6",
+    "scrollreveal": "^4.0.9",
     "terser-webpack-plugin": "^5.3.9",
     "webpack-merge": "^5.10.0"
   }
