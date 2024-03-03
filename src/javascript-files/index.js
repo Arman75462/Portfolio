@@ -154,6 +154,9 @@ toggleThemeButton.addEventListener("click", () => {
   switchGithubIcon();
 });
 
+// Initially set the background-image of toggleThemeButton button to dark-mode
+switchThemeButtonText();
+
 // Initialize ScrollReveal
 const sr = ScrollReveal({
   duration: 1000,

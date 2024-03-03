@@ -33,12 +33,12 @@ export function switchGithubIcon() {
   }
 }
 
-// If the website in in light-mode, put ☀️ for the toggleThemeButton's textContent. If not, put 🌛
+// If the website in in light-mode, put light-mode icon for the toggleThemeButton's textContent. If not, put dark-mode icon
 export function switchThemeButtonText() {
   if (document.body.classList.contains("light-mode")) {
-    toggleThemeButton.textContent = "☀️";
+    toggleThemeButton.style.backgroundImage = "url(images/light-mode.svg)";
   } else {
-    toggleThemeButton.textContent = "🌛";
+    toggleThemeButton.style.backgroundImage = "url(images/dark-mode.svg)";
   }
 }
 
