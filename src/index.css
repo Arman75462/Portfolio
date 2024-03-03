@@ -27,7 +27,6 @@ RESETS=====================
 body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* Better readability for title line-height */
@@ -100,6 +99,7 @@ body {
   color: var(--text-color);
   cursor: none;
   font-family: Poppins, sans-serif;
+  height: 100vh;
 }
 
 /* Website styles for light-mode theme */
