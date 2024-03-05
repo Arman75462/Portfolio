@@ -165,19 +165,13 @@ const sr = ScrollReveal({
 });
 
 // Apply animations to elements when they enter the viewport
-sr.reveal(".zoom-in", { scale: 0.5 });
-sr.reveal(".slide-left", { origin: "left", distance: "150px" });
-sr.reveal(".slide-right", { origin: "right", distance: "150px" });
-sr.reveal(".flip-vertical", {
-  rotate: { x: 0, y: 180, z: 0 },
-});
-sr.reveal(".flip-horizontal", {
-  rotate: { x: 180, y: 0, z: 0 },
-});
+sr.reveal(".zoom-in", { opacity: 0, duration: 2500, scale: 0.8 });
+sr.reveal(".fade-in", { opacity: 0, scale: 0.95 });
 sr.reveal(".slide-up", {
   origin: "bottom",
-  distance: "100px",
+  distance: "50px",
   opacity: 0,
   viewFactor: 0.5,
 });
+
 // More animations can be added as needed
