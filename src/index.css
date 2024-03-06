@@ -200,6 +200,7 @@ body.light-mode {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, var(--text-color), var(--striking-color));
   border-radius: 7px;
+  cursor: auto;
 }
 
 /* Font-size for all sections font-size */
